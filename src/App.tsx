@@ -1,5 +1,6 @@
 import {
   Button,
+  Card,
   Icon,
   Input,
   RuyiLayout,
@@ -49,6 +50,7 @@ export default function App() {
       accountName="品牌名称"
       accountId="12345678"
       className="h-screen"
+      contentClassName="space-y-4"
     >
       {/* 一般在这里开始，以及需要的话修改上方的 MENU_ITEMS */}
       {/* <div className="rounded-xl bg-white p-6">
