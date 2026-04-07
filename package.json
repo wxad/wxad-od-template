@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "one-design-next": "^0.0.4-alpha.99",
+    "one-design-next": "^0.0.4-alpha.100",
     "react": "^19",
     "react-dom": "^19"
   },
