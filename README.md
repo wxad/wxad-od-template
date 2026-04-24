@@ -41,4 +41,4 @@ npm run typecheck  # 可选：全量 tsc
 
 克隆父仓库：`git submodule update --init --recursive`。
 
-**`@tencent/retail-ai-lib`** 会把 React 16 装在自身 `node_modules` 下，导致与模板 React 19 双实例、页面白屏（Invalid hook call）。安装后 **`postinstall`** 会删掉该嵌套副本；若你禁用了 scripts，请手删 `node_modules/@tencent/retail-ai-lib/node_modules` 下的 `react` / `react-dom` / `scheduler`。
+**区域洞察**（`regional-insight`）在模板内使用 SVG/CSS **示意地图与热力**，不接入 `@tencent/retail-ai-lib`，避免与 React 19 双实例冲突；若需真实地图能力，请在业务仓库单独接入并保证单一 React 副本。

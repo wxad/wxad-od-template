@@ -14,12 +14,8 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from 'react';
-// @ts-ignore
-import { AoiRecommendation, DmpUserAnalysis } from '@tencent/retail-ai-lib';
-import '@tencent/retail-ai-lib/dist/styles.css';
 import regionalAoiRecmJson from './data/regional-aoi-recm.json';
 import regionalAudiencesJson from './data/regional-audiences.json';
 import regionalStorePackagesJson from './data/regional-store-packages.json';
@@ -309,47 +305,59 @@ function RankStars({ score }: { score: number }) {
   );
 }
 
-// ─── 右侧地图区（用腾讯地图静态图 + AOI 标记） ─────
+// ─── 右侧地图区（本地示意底图 + AOI 色块，不依赖外部地图 SDK） ─────
 
-function MapArea({
-  aoiList,
-  center,
-}: {
-  aoiList: AoiItem[];
-  center: { lat: string; lng: string };
-}) {
-  // 腾讯地图静态图 API
-  const markers = aoiList
-    .slice(0, 9)
-    .map((a, i) => `${a.lat},${a.lng}`)
-    .join('|');
-  const mapUrl = `https://apis.map.qq.com/ws/staticmap/v2/?center=${center.lat},${center.lng}&zoom=15&size=800x600&maptype=roadmap&markers=size:mid|color:0x296BEF|label:A|${markers}&key=TXNBZ-DZ2KF-GMOJB-NQXMO-BZNQF-PFBQD`;
-
+function MapArea({ aoiList }: { aoiList: AoiItem[] }) {
   return (
     <div
-      className="flex-1 min-w-0 relative rounded-lg overflow-hidden bg-black-1"
+      className="flex-1 min-w-0 relative rounded-lg overflow-hidden border border-black-5 bg-[#e8eef5]"
       style={{ height: 'calc(85vh - 20px)' }}
     >
-      <img
-        src={mapUrl}
-        alt="地图"
-        className="w-full h-full object-cover"
-        onError={(e) => {
-          // 静态图加载失败时显示灰底
-          (e.target as HTMLImageElement).style.display = 'none';
+      <div
+        className="absolute inset-0 opacity-45"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(15,23,42,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.07) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
         }}
       />
-      {/* AOI 多边形覆盖（简化：用半透明色块表示区域） */}
+      <svg
+        className="absolute inset-0 h-full w-full pointer-events-none text-slate-400/70"
+        preserveAspectRatio="none"
+        aria-hidden
+      >
+        <path
+          d="M0,42% Q28%,32% 52%,46% T100%,38%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+        />
+        <path
+          d="M4%,98% L14%,58% L36%,52% L58%,72% L76%,38% L100%,18%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <path
+          d="M0,72% L32%,66% L58%,80% L100%,74%"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+      </svg>
+      <div className="absolute top-3 left-3 text-xs font-medium text-black-9 bg-white/90 px-2 py-1 rounded-md shadow-sm border border-black-4">
+        地图示意（模板演示）
+      </div>
       {aoiList.slice(0, 10).map((aoi) => {
         const score = aoi.score;
         const color =
           score >= 0.8
-            ? 'rgba(41,107,239,0.25)'
+            ? 'rgba(41,107,239,0.28)'
             : score >= 0.6
-              ? 'rgba(51,210,203,0.25)'
+              ? 'rgba(51,210,203,0.28)'
               : score >= 0.4
-                ? 'rgba(252,176,76,0.25)'
-                : 'rgba(245,166,35,0.2)';
+                ? 'rgba(252,176,76,0.28)'
+                : 'rgba(245,166,35,0.22)';
         return (
           <Tooltip
             key={aoi.aoi_int_id}
@@ -359,8 +367,7 @@ function MapArea({
               className="absolute rounded cursor-pointer hover:opacity-80 transition-opacity"
               style={{
                 backgroundColor: color,
-                border: `2px solid ${color.replace('0.25', '0.6').replace('0.2', '0.5')}`,
-                // 伪随机位置分布在地图区域内
+                border: `2px solid ${color.replace('0.28', '0.55').replace('0.22', '0.5')}`,
                 left: `${15 + ((aoi.rank * 37) % 55)}%`,
                 top: `${10 + ((aoi.rank * 53) % 60)}%`,
                 width: Math.max(40, Math.min(80, aoi.user_cnt / 100)),
@@ -370,9 +377,39 @@ function MapArea({
           </Tooltip>
         );
       })}
-      {/* 底部地图品牌 */}
       <div className="absolute bottom-2 left-2 text-xs text-black-8 bg-white/80 px-2 py-0.5 rounded">
-        腾讯地图
+        非真实 GIS · 仅布局演示
+      </div>
+    </div>
+  );
+}
+
+function OnePartyHeatMock() {
+  return (
+    <div
+      className="relative mt-4 w-full rounded-lg overflow-hidden border border-black-5"
+      style={{ height: '85vh' }}
+    >
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 75% 55% at 38% 42%, rgba(255,120,90,0.42), transparent 52%), radial-gradient(ellipse 45% 38% at 72% 58%, rgba(41,107,239,0.32), transparent 48%), linear-gradient(180deg, #e8eef5 0%, #dce6f0 100%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px)',
+          backgroundSize: '36px 36px',
+        }}
+      />
+      <div className="absolute top-3 left-3 text-xs font-medium text-black-9 bg-white/90 px-2 py-1 rounded-md shadow-sm border border-black-4">
+        一方人群热力示意（模板演示）
+      </div>
+      <div className="absolute bottom-2 left-2 text-xs text-black-8 bg-white/80 px-2 py-0.5 rounded">
+        非真实热力引擎 · 仅布局演示
       </div>
     </div>
   );
@@ -387,7 +424,6 @@ function StoreAnalysis({
   active: boolean;
   cdnData: typeof regionalInsightCdnData;
 }) {
-  const mapRef = useRef<any>(null);
   const [stores, setStores] = useState<string[]>([]);
   const [storePackageId, setStorePackageId] = useState('');
   const [storeMode, setStoreMode] = useState('STORE');
@@ -423,34 +459,11 @@ function StoreAnalysis({
     []) as AoiItem[];
   const totalUserCnt = aoiList.reduce((sum, a) => sum + (a.user_cnt || 0), 0);
 
-  const handleSearch = useCallback(async () => {
+  const handleSearch = useCallback(() => {
     if (storeMode === 'STORE' && stores.length === 0) return;
     if (storeMode === 'STORE_PACKAGE' && !storePackageId) return;
     setSearched(true);
-    try {
-      const params: Record<string, unknown> = {
-        recm_mode: recmMode,
-        distance: distance > 1 ? distance / 1000 : null,
-        domain: domain !== 'all' ? domain : null,
-        min_user_cnt: 0,
-        max_aoi_cnt: +recommendNumber || 50,
-        request_source: 'ruyi',
-      };
-      if (storeMode === 'STORE') params.poi_list = stores;
-      else params.local_store_package_id = storePackageId;
-      await mapRef.current?.search?.(params);
-    } catch (e) {
-      console.error(e);
-    }
-  }, [
-    stores,
-    storeMode,
-    storePackageId,
-    recmMode,
-    domain,
-    distance,
-    recommendNumber,
-  ]);
+  }, [stores, storeMode, storePackageId]);
 
   const onRecommendNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value.replace(/[^0-9]/g, '');
@@ -568,32 +581,8 @@ function StoreAnalysis({
 
       {/* 结果区域（对齐截图：左面板 + 右地图） */}
       {searched && aoiList.length > 0 && (
-        <div className="flex gap-3 mt-4">
-          <div
-            className="flex-1 min-w-0 relative rounded-lg overflow-hidden"
-            style={{ height: 'calc(85vh - 20px)' }}
-          >
-            <AoiRecommendation
-              ref={mapRef}
-              style={{
-                width: '100%',
-                height: '100%',
-                background: '#fff',
-                borderRadius: 8,
-              }}
-              recm_mode={recmMode}
-              poi_list={storeMode === 'STORE' ? stores : undefined}
-              local_store_package_id={
-                storeMode === 'STORE_PACKAGE' ? storePackageId : undefined
-              }
-              distance={distance > 1 ? distance / 1000 : null}
-              domain={domain !== 'all' ? domain : null}
-              min_user_cnt={0}
-              max_aoi_cnt={+recommendNumber || 50}
-              request_source="ruyi"
-              baseUrl="/cgi-bin/region"
-            />
-          </div>
+        <div className="flex gap-3 mt-4 px-6">
+          <MapArea aoiList={aoiList} />
         </div>
       )}
     </div>
@@ -609,7 +598,6 @@ function OnePartyAnalysis({
   active: boolean;
   cdnData: typeof regionalInsightCdnData;
 }) {
-  const mapRef = useRef<any>(null);
   const [audienceId, setAudienceId] = useState('');
   const [area, setArea] = useState<string[]>(['不限']);
   const [domain, setDomain] = useState('all');
@@ -631,23 +619,10 @@ function OnePartyAnalysis({
     setAudienceId(val);
   };
 
-  const handleSearch = useCallback(async () => {
+  const handleSearch = useCallback(() => {
     if (!audienceId) return;
     setSearched(true);
-    try {
-      const params: Record<string, unknown> = {
-        task_id: audienceId,
-        admin: area[area.length - 1] || '不限',
-        mode: domain === 'all' ? 'topn' : domain,
-        heatmap_scale: heatmapScale,
-        request_source: 'ruyi',
-        max_aoi_cnt: +recommendNumber || 500,
-      };
-      await mapRef.current?.search?.(params);
-    } catch (e) {
-      console.error(e);
-    }
-  }, [audienceId, area, domain, heatmapScale, recommendNumber]);
+  }, [audienceId]);
 
   const onRecommendNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value.replace(/[^0-9]/g, '');
@@ -744,17 +719,9 @@ function OnePartyAnalysis({
       </div>
 
       {active && searched && (
-        <DmpUserAnalysis
-          ref={mapRef}
-          style={{
-            width: '100%',
-            height: '85vh',
-            marginTop: 16,
-            background: '#fff',
-            borderRadius: 8,
-          }}
-          baseUrl="/cgi-bin/region"
-        />
+        <div className="px-6">
+          <OnePartyHeatMock />
+        </div>
       )}
     </div>
   );
