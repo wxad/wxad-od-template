@@ -12,6 +12,7 @@ import {
   Tooltip,
 } from 'one-design-next';
 import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 // @ts-ignore
 import * as echarts from 'echarts';
 import EChartsReact from 'echarts-for-react';
@@ -960,12 +961,12 @@ export default function Home() {
             />
             <span className="text-black-9 text-xs">统计周期:{periodText}</span>
           </div>
-          <a
-            href="/workshop/compete-analysis"
+          <Link
+            to="/compete-analysis"
             className="text-brand-6 text-xs hover:underline"
           >
             查看完整榜单
-          </a>
+          </Link>
         </div>
         <IndustryRankSection rankConfig={rankConfig} rankData={rankData} />
       </div>

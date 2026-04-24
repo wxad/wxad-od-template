@@ -1,6 +1,9 @@
 import type { ComponentType } from "react"
 
-/** 与文档站 `/workshop/<slug>` 一致；仅 crowd-market / spuAudienceAsset 文件名与 slug 不同 */
+/**
+ * 本模板路由：`/<slug>`（如 `/home`）。文档站仍为 `/workshop/<slug>`。
+ * crowd-market / spuAudienceAsset 文件名与 slug 不同，见映射表。
+ */
 export const WORKSHOP_SLUG_TO_IMPORT: Record<
   string,
   () => Promise<{ default: ComponentType }>

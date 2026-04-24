@@ -73,8 +73,8 @@ function navigateMenu(key: string) {
   const slug = MENU_ROUTES[key];
   if (!slug || typeof window === 'undefined') return;
   // 替换当前 URL 最后一段为目标 slug：
-  //   本地  http://localhost:8000/workshop/brand5r?fullscreen=1
-  //   发布  https://od-next.pages.woa.com/workshop/brand5r
+  //   模板本地  http://localhost:5173/brand5r
+  //   文档站    https://od-next.pages.woa.com/workshop/brand5r
   // 都能正确跳到同级页面，并保留 ?fullscreen=1 等查询参数。
   const url = new URL(window.location.href);
   const segments = url.pathname.replace(/\/+$/, '').split('/');

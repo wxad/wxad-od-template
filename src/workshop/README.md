@@ -1,7 +1,5 @@
-# workshop（如翼整页示例）
+# workshop（整页示例源码）
 
-与 **one-design-next** 文档站 `docs-pages/workshop/*.md` 中 `<code src="../../external/wxad-od-template/src/workshop/...">` 对齐。
-
-- 区块实现位于 **`../blocks/`**（自包含，可脱离父仓库运行）。
-- 本目录页面通过 `../blocks/...` 引用区块；通知类 demo 入口在 `../blocks/_internal/notification-popover-trigger.tsx`。
-- 评测总览使用 `./data/benchmark-site.json`（由父仓库 `.dumi/data/benchmark.json` 同步，构建文档站后可在模板侧更新该文件）。
+- **本模板访问**：`http://localhost:5173/<slug>`（如 `/home`）。根路径 `/` 为空白壳，见 `src/pages/StarterShell.tsx`。
+- **文档站**：仍为 `docs-pages/workshop/*.md` + 路由 `/workshop/<slug>`，`<code src>` 指向本目录下对应 `.tsx`。
+- 区块在 **`../blocks/`**；评测数据见 `data/benchmark-site.json`。

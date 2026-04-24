@@ -4,7 +4,7 @@ import { useMemo, useState } from "react"
 import { MENU_ITEMS, menuLabelForKey } from "../config/menuItems"
 import { DefaultDashboard } from "./DefaultDashboard"
 
-/** 不含业务 workshop 的空白壳，给「从 0 搭页」用 */
+/** 根路径：空白 RuyiLayout + 工作台占位，给「从 0 搭页」用 */
 export function StarterShell() {
   const [activeMenu, setActiveMenu] = useState("dashboard")
 
@@ -25,9 +25,15 @@ export function StarterShell() {
       contentClassName="space-y-4"
     >
       <p className="text-sm text-[var(--odn-color-black-36)]">
-        <Link className="text-[var(--odn-color-blue-7)] underline" to="/">
-          ← 返回 Workshop 索引
+        示例整页见{" "}
+        <Link className="text-[var(--odn-color-blue-7)] underline" to="/home">
+          /home
         </Link>
+        等；完整列表{" "}
+        <Link className="text-[var(--odn-color-blue-7)] underline" to="/catalog">
+          /catalog
+        </Link>
+        。
       </p>
       <DefaultDashboard title={contentTitle} />
     </RuyiLayout>
