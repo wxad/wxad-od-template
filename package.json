@@ -9,8 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tencent/retail-ai-lib": "^1.1.14",
+    "clsx": "^2.1.1",
+    "echarts": "^6.0.0",
+    "echarts-for-react": "^3.0.6",
     "one-design-next": "latest",
     "react": "^19",
+    "react-d3-cloud": "^1.0.6",
     "react-dom": "^19"
   },
   "devDependencies": {
