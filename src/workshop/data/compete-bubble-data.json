@@ -1,0 +1,64 @@
+{
+  "list": [
+    {
+      "brand_id": "1000040",
+      "brand_name": "香奈儿/Chanel",
+      "x_normalized_value": "100.00",
+      "y_normalized_value": "41.53",
+      "round_normalized_value": "6.21",
+      "x_origin_value": "16.56%",
+      "y_origin_value": "1565957.00",
+      "round_origin_value": "1970.00"
+    },
+    {
+      "brand_id": "1000040",
+      "brand_name": "香奈儿/Chanel",
+      "x_normalized_value": "100.00",
+      "y_normalized_value": "41.53",
+      "round_normalized_value": "6.21",
+      "x_origin_value": "16.56%",
+      "y_origin_value": "1565957.00",
+      "round_origin_value": "1970.00"
+    },
+    {
+      "brand_id": "1000519",
+      "brand_name": "谷雨/Grain Rain",
+      "x_normalized_value": "79.62",
+      "y_normalized_value": "100.00",
+      "round_normalized_value": "100.00",
+      "x_origin_value": "",
+      "y_origin_value": "",
+      "round_origin_value": ""
+    },
+    {
+      "brand_id": "1000042",
+      "brand_name": "赫莲娜/HELENA RUBINSTEIN",
+      "x_normalized_value": "17.76",
+      "y_normalized_value": "32.86",
+      "round_normalized_value": "16.85",
+      "x_origin_value": "",
+      "y_origin_value": "",
+      "round_origin_value": ""
+    },
+    {
+      "brand_id": "1000039",
+      "brand_name": "海蓝之谜/LA MER",
+      "x_normalized_value": "5.56",
+      "y_normalized_value": "0.00",
+      "round_normalized_value": "0.00",
+      "x_origin_value": "",
+      "y_origin_value": "",
+      "round_origin_value": ""
+    },
+    {
+      "brand_id": "1000113",
+      "brand_name": "自然堂/CHANDO",
+      "x_normalized_value": "0.00",
+      "y_normalized_value": "16.20",
+      "round_normalized_value": "37.43",
+      "x_origin_value": "",
+      "y_origin_value": "",
+      "round_origin_value": ""
+    }
+  ]
+}

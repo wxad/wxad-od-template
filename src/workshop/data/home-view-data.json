@@ -1,0 +1,5670 @@
+{
+  "scale": {
+    "cur": [
+      {
+        "name": "QUOTA_SCALE_R0",
+        "desc": "人群总资产",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 73322692,
+        "tag": "2_1000040_20260420_2_1",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SCALE_R1",
+        "desc": "R1人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 38476813,
+        "tag": "2_1000040_20260420_2_2",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SCALE_R2",
+        "desc": "R2人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 30036231,
+        "tag": "2_1000040_20260420_2_3",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SCALE_R3",
+        "desc": "R3人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 4649366,
+        "tag": "2_1000040_20260420_2_4",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SCALE_R4",
+        "desc": "R4人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 129197,
+        "tag": "2_1000040_20260420_2_5",
+        "source": "ADVERTISER_OWN_DATA"
+      },
+      {
+        "name": "QUOTA_SCALE_R5",
+        "desc": "R5人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 31085,
+        "tag": "2_1000040_20260420_2_6",
+        "source": "ADVERTISER_OWN_DATA"
+      },
+      {
+        "name": "QUOTA_R0_6820003",
+        "desc": "主力机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.025526,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820004",
+        "desc": "中高端机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.041824,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6830001",
+        "desc": "汽车意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.091428,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6840001",
+        "desc": "运动户外商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.092793,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6850001",
+        "desc": "家居兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.11632,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6860001",
+        "desc": "萌宠商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.111703,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870002",
+        "desc": "母婴核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.116076,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870003",
+        "desc": "母婴兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.101892,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6890003",
+        "desc": "清洁电器兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.122545,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900001",
+        "desc": "美酒佳酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.070665,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900002",
+        "desc": "纯香美酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.107657,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910001",
+        "desc": "奢美行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.215076,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910002",
+        "desc": "香水核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.261365,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910005",
+        "desc": "彩妆兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.248348,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910006",
+        "desc": "护肤品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.235072,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910007",
+        "desc": "美容产品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.179445,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910008",
+        "desc": "浪漫礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.118668,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910009",
+        "desc": "心意礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.194429,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910010",
+        "desc": "硬奢人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.394759,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910012",
+        "desc": "户外商旅人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.223001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910013",
+        "desc": "青春阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.260484,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910014",
+        "desc": "轻熟阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.225061,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910015",
+        "desc": "熟龄阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.164565,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910016",
+        "desc": "潮流宠儿渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.243498,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910017",
+        "desc": "文艺精英渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.175425,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910018",
+        "desc": "奢美女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.245829,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910019",
+        "desc": "奢美男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.141675,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910020",
+        "desc": "奢美熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.147439,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910021",
+        "desc": "美妆行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.157022,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910022",
+        "desc": "美妆小镇女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.129279,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910023",
+        "desc": "美妆城市女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.287244,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910024",
+        "desc": "美妆熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.085935,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910025",
+        "desc": "美妆男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1026,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910026",
+        "desc": "美妆功效成分党渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.201012,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6920001",
+        "desc": "奢侈品意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.234021,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6930007",
+        "desc": "大健康品类潜力人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.097008,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6940001",
+        "desc": "汽车后市场泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.095588,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6950001",
+        "desc": "大家电泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.106814,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6960001",
+        "desc": "乳制品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.097413,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6980001",
+        "desc": "亲子游兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.087888,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6990001",
+        "desc": "ITtoB泛关注人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.11873,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7010001",
+        "desc": "烹饪兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.076222,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7020002",
+        "desc": "游戏行业机会人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.057724,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7030005",
+        "desc": "大众零食兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12325,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7050001",
+        "desc": "喜剧家庭类影视剧兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.134327,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070054",
+        "desc": "车展-文娱社交族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.116013,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070055",
+        "desc": "车展-家庭乐享派渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.10407,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070056",
+        "desc": "车展-智能科技族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.094708,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060001",
+        "desc": "时尚女大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.256902,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060002",
+        "desc": "宝藏男大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.077103,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060003",
+        "desc": "职场新星渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.15185,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060004",
+        "desc": "精致辣妈渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.20324,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060005",
+        "desc": "精英型男渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.074209,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060006",
+        "desc": "悦己女神渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.201275,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060007",
+        "desc": "成熟中产渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.045493,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060008",
+        "desc": "小城贵族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.062068,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060009",
+        "desc": "潜力新人渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.044213,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060010",
+        "desc": "松弛青年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.038607,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060011",
+        "desc": "佛系中年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.025121,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060012",
+        "desc": "银发一族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01083,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "cpt_avg": [
+      {
+        "name": "QUOTA_SCALE_R0",
+        "desc": "人群总资产",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 43261158.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R1",
+        "desc": "R1人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 22831003.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R2",
+        "desc": "R2人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 15923182.4,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R3",
+        "desc": "R3人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 4477504.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R4",
+        "desc": "R4人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 23470.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R5",
+        "desc": "R5人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 5997.8,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820003",
+        "desc": "主力机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.014982199999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820004",
+        "desc": "中高端机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.026024799999999997,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6830001",
+        "desc": "汽车意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0527718,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6840001",
+        "desc": "运动户外商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0535026,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6850001",
+        "desc": "家居兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0709204,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6860001",
+        "desc": "萌宠商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.072873,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870002",
+        "desc": "母婴核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.07665419999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870003",
+        "desc": "母婴兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.064707,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6890003",
+        "desc": "清洁电器兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0698982,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900001",
+        "desc": "美酒佳酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0446294,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900002",
+        "desc": "纯香美酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.06445599999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910001",
+        "desc": "奢美行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.11014299999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910002",
+        "desc": "香水核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.13351960000000002,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910005",
+        "desc": "彩妆兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12853279999999997,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910006",
+        "desc": "护肤品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1262724,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910007",
+        "desc": "美容产品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0974374,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910008",
+        "desc": "浪漫礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.04823039999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910009",
+        "desc": "心意礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0883186,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910010",
+        "desc": "硬奢人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.161464,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910012",
+        "desc": "户外商旅人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1150622,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910013",
+        "desc": "青春阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1259358,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910014",
+        "desc": "轻熟阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.13075219999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910015",
+        "desc": "熟龄阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0872436,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910016",
+        "desc": "潮流宠儿渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1253052,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910017",
+        "desc": "文艺精英渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.08710399999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910018",
+        "desc": "奢美女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1255402,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910019",
+        "desc": "奢美男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0733934,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910020",
+        "desc": "奢美熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.036960799999999995,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910021",
+        "desc": "美妆行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.08626819999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910022",
+        "desc": "美妆小镇女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0903968,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910023",
+        "desc": "美妆城市女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1445806,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910024",
+        "desc": "美妆熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0238758,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910025",
+        "desc": "美妆男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.059050599999999995,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910026",
+        "desc": "美妆功效成分党渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12144920000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6920001",
+        "desc": "奢侈品意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.10046300000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6930007",
+        "desc": "大健康品类潜力人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.050519400000000006,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6940001",
+        "desc": "汽车后市场泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.060263199999999996,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6950001",
+        "desc": "大家电泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0639276,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6960001",
+        "desc": "乳制品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.05860339999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6980001",
+        "desc": "亲子游兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.05339700000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6990001",
+        "desc": "ITtoB泛关注人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.07519139999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7010001",
+        "desc": "烹饪兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0461684,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7020002",
+        "desc": "游戏行业机会人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0368234,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7030005",
+        "desc": "大众零食兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.07410839999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7050001",
+        "desc": "喜剧家庭类影视剧兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1024386,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070054",
+        "desc": "车展-文娱社交族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.06298859999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070055",
+        "desc": "车展-家庭乐享派渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0676408,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070056",
+        "desc": "车展-智能科技族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0605414,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060001",
+        "desc": "时尚女大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.11749859999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060002",
+        "desc": "宝藏男大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.05485939999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060003",
+        "desc": "职场新星渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.10009920000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060004",
+        "desc": "精致辣妈渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1269786,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060005",
+        "desc": "精英型男渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0549076,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060006",
+        "desc": "悦己女神渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.11935120000000002,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060007",
+        "desc": "成熟中产渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0157946,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060008",
+        "desc": "小城贵族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.06630899999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060009",
+        "desc": "潜力新人渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0268752,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060010",
+        "desc": "松弛青年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0236728,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060011",
+        "desc": "佛系中年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0149846,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060012",
+        "desc": "银发一族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0024706,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_avg": [
+      {
+        "name": "QUOTA_SCALE_R0",
+        "desc": "人群总资产",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 8355602.067961165,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R1",
+        "desc": "R1人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 4887229.227722772,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R2",
+        "desc": "R2人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 2875662.6534653464,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R3",
+        "desc": "R3人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 687404.3495145631,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R4",
+        "desc": "R4人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 62317.32394366197,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R5",
+        "desc": "R5人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 19532.681159420288,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820003",
+        "desc": "主力机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0033633921568627435,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820004",
+        "desc": "中高端机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.004968281553398057,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6830001",
+        "desc": "汽车意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.009764572815533982,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6840001",
+        "desc": "运动户外商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.010488155339805828,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6850001",
+        "desc": "家居兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.013155436893203885,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6860001",
+        "desc": "萌宠商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.013313378640776708,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870002",
+        "desc": "母婴核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.015320689320388343,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870003",
+        "desc": "母婴兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.012805970873786404,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6890003",
+        "desc": "清洁电器兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.013403174757281556,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900001",
+        "desc": "美酒佳酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.006158087378640777,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900002",
+        "desc": "纯香美酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.011928592233009709,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910001",
+        "desc": "奢美行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02175071844660195,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910002",
+        "desc": "香水核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.025077029126213592,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910005",
+        "desc": "彩妆兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.024989932038834973,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910006",
+        "desc": "护肤品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02478669902912623,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910007",
+        "desc": "美容产品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.023184058252427173,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910008",
+        "desc": "浪漫礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.00793,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910009",
+        "desc": "心意礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.023672116504854367,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910010",
+        "desc": "硬奢人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.03164872815533981,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910012",
+        "desc": "户外商旅人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02340339805825243,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910013",
+        "desc": "青春阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0226924854368932,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910014",
+        "desc": "轻熟阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.025296135922330088,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910015",
+        "desc": "熟龄阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01946935922330096,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910016",
+        "desc": "潮流宠儿渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02509063106796118,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910017",
+        "desc": "文艺精英渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0213131067961165,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910018",
+        "desc": "奢美女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.027003902912621364,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910019",
+        "desc": "奢美男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.009212213592233008,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910020",
+        "desc": "奢美熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.011526676470588235,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910021",
+        "desc": "美妆行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.017767184466019423,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910022",
+        "desc": "美妆小镇女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.021805019417475716,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910023",
+        "desc": "美妆城市女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02963804854368931,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910024",
+        "desc": "美妆熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.008862519607843136,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910025",
+        "desc": "美妆男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0077316116504854366,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910026",
+        "desc": "美妆功效成分党渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02599364077669904,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6920001",
+        "desc": "奢侈品意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.019150504854368925,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6930007",
+        "desc": "大健康品类潜力人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01128033980582524,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6940001",
+        "desc": "汽车后市场泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.010892291262135919,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6950001",
+        "desc": "大家电泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.011871262135922328,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6960001",
+        "desc": "乳制品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.011365980582524264,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6980001",
+        "desc": "亲子游兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0105537572815534,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6990001",
+        "desc": "ITtoB泛关注人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.012656281553398055,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7010001",
+        "desc": "烹饪兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.00973901941747573,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7020002",
+        "desc": "游戏行业机会人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.006551291262135921,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7030005",
+        "desc": "大众零食兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.013821737864077675,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7050001",
+        "desc": "喜剧家庭类影视剧兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01607256310679611,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070054",
+        "desc": "车展-文娱社交族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.011715728155339803,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070055",
+        "desc": "车展-家庭乐享派渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01282745631067962,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070056",
+        "desc": "车展-智能科技族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.009967087378640781,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060001",
+        "desc": "时尚女大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02418205825242719,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060002",
+        "desc": "宝藏男大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.00661980392156863,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060003",
+        "desc": "职场新星渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.015470330097087379,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060004",
+        "desc": "精致辣妈渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02740981553398058,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060005",
+        "desc": "精英型男渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.005875883495145629,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060006",
+        "desc": "悦己女神渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.02369595145631069,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060007",
+        "desc": "成熟中产渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0039032549019607813,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060008",
+        "desc": "小城贵族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.01316864705882353,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060009",
+        "desc": "潜力新人渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.004386776699029123,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060010",
+        "desc": "松弛青年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.004692611650485436,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060011",
+        "desc": "佛系中年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0035597766990291273,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060012",
+        "desc": "银发一族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0009834100000000003,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_top5_avg": [
+      {
+        "name": "QUOTA_SCALE_R0",
+        "desc": "人群总资产",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 65341747.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R1",
+        "desc": "R1人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 37411353.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R2",
+        "desc": "R2人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 23653134.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R3",
+        "desc": "R3人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 7645068.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R4",
+        "desc": "R4人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 487841.4,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SCALE_R5",
+        "desc": "R5人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 160051.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820003",
+        "desc": "主力机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0274914,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6820004",
+        "desc": "中高端机型换机兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.039067399999999995,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6830001",
+        "desc": "汽车意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0814242,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6840001",
+        "desc": "运动户外商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0804606,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6850001",
+        "desc": "家居兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.10597140000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6860001",
+        "desc": "萌宠商品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.10754519999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870002",
+        "desc": "母婴核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12059199999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6870003",
+        "desc": "母婴兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1000262,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6890003",
+        "desc": "清洁电器兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1072142,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900001",
+        "desc": "美酒佳酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0707082,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6900002",
+        "desc": "纯香美酿意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09920079999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910001",
+        "desc": "奢美行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1632322,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910002",
+        "desc": "香水核心人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.186977,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910005",
+        "desc": "彩妆兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1850476,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910006",
+        "desc": "护肤品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1823568,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910007",
+        "desc": "美容产品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.159565,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910008",
+        "desc": "浪漫礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0830184,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910009",
+        "desc": "心意礼赠人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.17751180000000003,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910010",
+        "desc": "硬奢人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.24217,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910012",
+        "desc": "户外商旅人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.17904379999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910013",
+        "desc": "青春阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1776398,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910014",
+        "desc": "轻熟阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.18686000000000003,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910015",
+        "desc": "熟龄阶段人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.15692279999999997,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910016",
+        "desc": "潮流宠儿渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1871232,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910017",
+        "desc": "文艺精英渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.16323179999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910018",
+        "desc": "奢美女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.191798,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910019",
+        "desc": "奢美男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1126436,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910020",
+        "desc": "奢美熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1084762,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910021",
+        "desc": "美妆行业意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.134809,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910022",
+        "desc": "美妆小镇女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1688444,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910023",
+        "desc": "美妆城市女性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.21030959999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910024",
+        "desc": "美妆熟龄向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09138919999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910025",
+        "desc": "美妆男性向产品人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09265439999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6910026",
+        "desc": "美妆功效成分党渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1872958,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6920001",
+        "desc": "奢侈品意向人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1453878,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6930007",
+        "desc": "大健康品类潜力人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09155939999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6940001",
+        "desc": "汽车后市场泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09272260000000002,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6950001",
+        "desc": "大家电泛兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1011964,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6960001",
+        "desc": "乳制品兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0881216,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6980001",
+        "desc": "亲子游兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0821534,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_6990001",
+        "desc": "ITtoB泛关注人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1128238,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7010001",
+        "desc": "烹饪兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0797802,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7020002",
+        "desc": "游戏行业机会人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.05189119999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7030005",
+        "desc": "大众零食兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1074012,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7050001",
+        "desc": "喜剧家庭类影视剧兴趣人群渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.126176,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070054",
+        "desc": "车展-文娱社交族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0954362,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070055",
+        "desc": "车展-家庭乐享派渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1026224,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_R0_7070056",
+        "desc": "车展-智能科技族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.08813159999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060001",
+        "desc": "时尚女大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1815496,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060002",
+        "desc": "宝藏男大渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.08306460000000002,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060003",
+        "desc": "职场新星渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12824,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060004",
+        "desc": "精致辣妈渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.2003544,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060005",
+        "desc": "精英型男渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0743184,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060006",
+        "desc": "悦己女神渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1642468,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060007",
+        "desc": "成熟中产渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.036171999999999996,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060008",
+        "desc": "小城贵族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0996394,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060009",
+        "desc": "潜力新人渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.036379800000000004,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060010",
+        "desc": "松弛青年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0382646,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060011",
+        "desc": "佛系中年渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0318504,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060012",
+        "desc": "银发一族渗透率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0111402,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "rank": [
+      {
+        "name": "QUOTA_SCALE_R0",
+        "desc": "人群总资产",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SCALE_R1",
+        "desc": "R1人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SCALE_R2",
+        "desc": "R2人数",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SCALE_R3",
+        "desc": "R3人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "雅诗兰黛/Estee Lauder",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SCALE_R4",
+        "desc": "R4人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "橘朵/JUDYDOLL",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 10,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SCALE_R5",
+        "desc": "R5人数",
+        "options": [
+          {
+            "name": "丝芙兰/SEPHORA",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 10,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6820003",
+        "desc": "主力机型换机兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6820004",
+        "desc": "中高端机型换机兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6830001",
+        "desc": "汽车意向人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6840001",
+        "desc": "运动户外商品兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6850001",
+        "desc": "家居兴趣人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6860001",
+        "desc": "萌宠商品兴趣人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6870002",
+        "desc": "母婴核心人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6870003",
+        "desc": "母婴兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6890003",
+        "desc": "清洁电器兴趣人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6900001",
+        "desc": "美酒佳酿意向人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6900002",
+        "desc": "纯香美酿意向人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910001",
+        "desc": "奢美行业意向人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910002",
+        "desc": "香水核心人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910005",
+        "desc": "彩妆兴趣人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910006",
+        "desc": "护肤品兴趣人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910007",
+        "desc": "美容产品兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910008",
+        "desc": "浪漫礼赠人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910009",
+        "desc": "心意礼赠人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910010",
+        "desc": "硬奢人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910012",
+        "desc": "户外商旅人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910013",
+        "desc": "青春阶段人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910014",
+        "desc": "轻熟阶段人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910015",
+        "desc": "熟龄阶段人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910016",
+        "desc": "潮流宠儿渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910017",
+        "desc": "文艺精英渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910018",
+        "desc": "奢美女性向产品人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910019",
+        "desc": "奢美男性向产品人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910020",
+        "desc": "奢美熟龄向产品人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910021",
+        "desc": "美妆行业意向人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910022",
+        "desc": "美妆小镇女性向产品人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 4,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910023",
+        "desc": "美妆城市女性向产品人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910024",
+        "desc": "美妆熟龄向产品人群渗透率",
+        "options": [
+          {
+            "name": "玉兰油/OLAY",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910025",
+        "desc": "美妆男性向产品人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6910026",
+        "desc": "美妆功效成分党渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6920001",
+        "desc": "奢侈品意向人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6930007",
+        "desc": "大健康品类潜力人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6940001",
+        "desc": "汽车后市场泛兴趣人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6950001",
+        "desc": "大家电泛兴趣人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6960001",
+        "desc": "乳制品兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6980001",
+        "desc": "亲子游兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_6990001",
+        "desc": "ITtoB泛关注人群渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7010001",
+        "desc": "烹饪兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7020002",
+        "desc": "游戏行业机会人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7030005",
+        "desc": "大众零食兴趣人群渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7050001",
+        "desc": "喜剧家庭类影视剧兴趣人群渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7070054",
+        "desc": "车展-文娱社交族渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7070055",
+        "desc": "车展-家庭乐享派渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_R0_7070056",
+        "desc": "车展-智能科技族渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060001",
+        "desc": "时尚女大渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060002",
+        "desc": "宝藏男大渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 4,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060003",
+        "desc": "职场新星渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060004",
+        "desc": "精致辣妈渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060005",
+        "desc": "精英型男渗透率",
+        "options": [
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060006",
+        "desc": "悦己女神渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060007",
+        "desc": "成熟中产渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060008",
+        "desc": "小城贵族渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 8,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060009",
+        "desc": "潜力新人渗透率",
+        "options": [
+          {
+            "name": "香奈儿/Chanel",
+            "no": 1,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060010",
+        "desc": "松弛青年渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 2,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060011",
+        "desc": "佛系中年渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 4,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_CharacterSetting_7060012",
+        "desc": "银发一族渗透率",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 3,
+            "is_cur": true,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 5,
+            "is_cur": false,
+            "dod": 0
+          }
+        ]
+      }
+    ]
+  },
+  "shape": {
+    "cur": [
+      {
+        "name": "QUOTA_SHAPE_R1R2_RATE",
+        "desc": "R1R2增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.2436131622066574,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_RATE",
+        "desc": "R3增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.3089159619373326,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_FLOW_RATE",
+        "desc": "R3流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.054894,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4_FLOW_RATE",
+        "desc": "R4流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.000152,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4R5_FLOW_RATE",
+        "desc": "R4R5流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.000162,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "cpt_avg": [
+      {
+        "name": "QUOTA_SHAPE_R1R2_RATE",
+        "desc": "R1R2增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.24944119718593816,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_RATE",
+        "desc": "R3增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.1505750814213973,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_FLOW_RATE",
+        "desc": "R3流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.08874599999999999,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4_FLOW_RATE",
+        "desc": "R4流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 5.619999999999999e-05,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4R5_FLOW_RATE",
+        "desc": "R4R5流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 6.72e-05,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_avg": [
+      {
+        "name": "QUOTA_SHAPE_R1R2_RATE",
+        "desc": "R1R2增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.202696088760153,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_RATE",
+        "desc": "R3增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": -0.2580150114087977,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_FLOW_RATE",
+        "desc": "R3流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.2126177572815534,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4_FLOW_RATE",
+        "desc": "R4流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0006604482758620691,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4R5_FLOW_RATE",
+        "desc": "R4R5流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0007306379310344829,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_top5_avg": [
+      {
+        "name": "QUOTA_SHAPE_R1R2_RATE",
+        "desc": "R1R2增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 83.12073874235858,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_RATE",
+        "desc": "R3增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 4.6834486632902355,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_FLOW_RATE",
+        "desc": "R3流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.9806750000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4_FLOW_RATE",
+        "desc": "R4流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0031755999999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SHAPE_R4R5_FLOW_RATE",
+        "desc": "R4R5流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0034692,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "rank": [
+      {
+        "name": "QUOTA_SHAPE_R1R2_RATE",
+        "desc": "R1R2增长率",
+        "options": [
+          {
+            "name": "玉兰油/OLAY",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "梅森马吉拉/MAISON MARGIELA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "路铂廷/CHRISTIAN LOUBOUTIN",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "祖·玛珑/JO MALONE",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 53,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_RATE",
+        "desc": "R3增长率",
+        "options": [
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "玉兰油/OLAY",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "兰嘉丝汀/LANCASTER",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "路铂廷/CHRISTIAN LOUBOUTIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 63,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SHAPE_R3_FLOW_RATE",
+        "desc": "R3流入率",
+        "options": [
+          {
+            "name": "半分一/BLANK ME",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "蒂佳婷/DR.JART",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "梅森马吉拉/MAISON MARGIELA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "衰败城市/URBAN DECAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 65,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SHAPE_R4_FLOW_RATE",
+        "desc": "R4流入率",
+        "options": [
+          {
+            "name": "林清轩/FOREST CABIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "橘朵/JUDYDOLL",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珂拉琪/COLORKEY",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "完美日记/PERFECT DIARY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 39,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SHAPE_R4R5_FLOW_RATE",
+        "desc": "R4R5流入率",
+        "options": [
+          {
+            "name": "林清轩/FOREST CABIN",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "完美日记/PERFECT DIARY",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "橘朵/JUDYDOLL",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珂拉琪/COLORKEY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 40,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      }
+    ]
+  },
+  "switch": {
+    "cur": [
+      {
+        "name": "QUOTA_SWITCH_R3_CUR",
+        "desc": "R3本品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 304951,
+        "tag": "2_1000040_20260420_4_1",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT",
+        "desc": "R3竞品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 275382,
+        "tag": "2_1000040_20260420_4_2",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI",
+        "desc": "R3摇摆偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 901969,
+        "tag": "2_1000040_20260420_4_3",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN",
+        "desc": "R3空白心智人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 3167064,
+        "tag": "2_1000040_20260420_4_4",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CUR_FLOW_RATE",
+        "desc": "R3本品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.067071,
+        "tag": "",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT_FLOW_RATE",
+        "desc": "R3竞品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.051103,
+        "tag": "",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI_FLOW_RATE",
+        "desc": "R3摇摆偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.090714,
+        "tag": "",
+        "source": "TENCENT_DATA"
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN_FLOW_RATE",
+        "desc": "R3空白心智人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.050647,
+        "tag": "",
+        "source": "TENCENT_DATA"
+      }
+    ],
+    "cpt_avg": [
+      {
+        "name": "QUOTA_SWITCH_R3_CUR",
+        "desc": "R3本品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 235245,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT",
+        "desc": "R3竞品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 392511.8,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI",
+        "desc": "R3摇摆偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 1144549.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN",
+        "desc": "R3空白心智人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 2705198.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CUR_FLOW_RATE",
+        "desc": "R3本品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.12197879999999998,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT_FLOW_RATE",
+        "desc": "R3竞品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.09668080000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI_FLOW_RATE",
+        "desc": "R3摇摆偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.1686716,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN_FLOW_RATE",
+        "desc": "R3空白心智人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0798202,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_avg": [
+      {
+        "name": "QUOTA_SWITCH_R3_CUR",
+        "desc": "R3本品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 42781.069306930694,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT",
+        "desc": "R3竞品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 48827.82352941176,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI",
+        "desc": "R3摇摆偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 135983.0776699029,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN",
+        "desc": "R3空白心智人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 461117.1359223301,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CUR_FLOW_RATE",
+        "desc": "R3本品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.24387305050505045,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT_FLOW_RATE",
+        "desc": "R3竞品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.2100800196078432,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI_FLOW_RATE",
+        "desc": "R3摇摆偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.263696932038835,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN_FLOW_RATE",
+        "desc": "R3空白心智人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.20974444660194175,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_top5_avg": [
+      {
+        "name": "QUOTA_SWITCH_R3_CUR",
+        "desc": "R3本品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 471280.6,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT",
+        "desc": "R3竞品偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 504230.8,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI",
+        "desc": "R3摇摆偏好人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 1566412.4,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN",
+        "desc": "R3空白心智人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 5291426,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CUR_FLOW_RATE",
+        "desc": "R3本品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.9789198000000001,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT_FLOW_RATE",
+        "desc": "R3竞品偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.9953192,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI_FLOW_RATE",
+        "desc": "R3摇摆偏好人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 1,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN_FLOW_RATE",
+        "desc": "R3空白心智人群流入率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.9793086000000001,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "rank": [
+      {
+        "name": "QUOTA_SWITCH_R3_CUR",
+        "desc": "R3本品偏好人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "赫莲娜/HELENA RUBINSTEIN",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT",
+        "desc": "R3竞品偏好人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "雅诗兰黛/Estee Lauder",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "韩束/KAN'S",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 8,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI",
+        "desc": "R3摇摆偏好人数",
+        "options": [
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "雅诗兰黛/Estee Lauder",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "自然堂/CHANDO",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN",
+        "desc": "R3空白心智人数",
+        "options": [
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "海蓝之谜/LA MER",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "珀莱雅/PROYA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "雅诗兰黛/Estee Lauder",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CUR_FLOW_RATE",
+        "desc": "R3本品偏好人群流入率",
+        "options": [
+          {
+            "name": "蒂佳婷/DR.JART",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "梅森马吉拉/MAISON MARGIELA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "小奥汀/littleondine",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "半分一/BLANK ME",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 82,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_CPT_FLOW_RATE",
+        "desc": "R3竞品偏好人群流入率",
+        "options": [
+          {
+            "name": "恋火/PASSIONAL LOVER",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "半分一/BLANK ME",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "INTOYOU",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "蒂佳婷/DR.JART",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 65,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_SWI_FLOW_RATE",
+        "desc": "R3摇摆偏好人群流入率",
+        "options": [
+          {
+            "name": "半分一/BLANK ME",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "INTOYOU",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "蒂佳婷/DR.JART",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "梅森马吉拉/MAISON MARGIELA",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 79,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_SWITCH_R3_NAN_FLOW_RATE",
+        "desc": "R3空白心智人群流入率",
+        "options": [
+          {
+            "name": "半分一/BLANK ME",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "蒂佳婷/DR.JART",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "梅森马吉拉/MAISON MARGIELA",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "衰败城市/URBAN DECAY",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 64,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      }
+    ]
+  },
+  "strength": {
+    "cur": [
+      {
+        "name": "QUOTA_STRENGTH_FANS",
+        "desc": "粉丝人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 5903242,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_FANS_RATE",
+        "desc": "粉丝增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 7.00000000000145e-05,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_MINI_APPS",
+        "desc": "小程序活跃人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 24117,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "cpt_avg": [
+      {
+        "name": "QUOTA_STRENGTH_FANS",
+        "desc": "粉丝人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 7003020.8,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_FANS_RATE",
+        "desc": "粉丝增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.00017540000000004774,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_MINI_APPS",
+        "desc": "小程序活跃人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 21604,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_avg": [
+      {
+        "name": "QUOTA_STRENGTH_FANS",
+        "desc": "粉丝人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 2469785.1126760566,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_FANS_RATE",
+        "desc": "粉丝增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.0002922173913043452,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_MINI_APPS",
+        "desc": "小程序活跃人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 6655.014492753623,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "industry_top5_avg": [
+      {
+        "name": "QUOTA_STRENGTH_FANS",
+        "desc": "粉丝人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 12658440,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_FANS_RATE",
+        "desc": "粉丝增长率",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0.002894799999999975,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_MINI_APPS",
+        "desc": "小程序活跃人数",
+        "type": "QUOTA_TYPE_NUMBER",
+        "value": 46523.2,
+        "tag": "",
+        "source": ""
+      },
+      {
+        "name": "QUOTA_STRENGTH_MIND_SHARE",
+        "desc": "心智份额",
+        "type": "QUOTA_TYPE_PERCENT",
+        "value": 0,
+        "tag": "",
+        "source": ""
+      }
+    ],
+    "rank": [
+      {
+        "name": "QUOTA_STRENGTH_FANS",
+        "desc": "粉丝人数",
+        "options": [
+          {
+            "name": "兰蔻/LANCOME",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "丝芙兰/SEPHORA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "圣罗兰美妆/YSL",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 10,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_STRENGTH_FANS_RATE",
+        "desc": "粉丝增长率",
+        "options": [
+          {
+            "name": "丸美/MARUBI",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "普拉达美妆/PRADA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "博柏利美妆/BURBERRY",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "谷雨/Grain Rain",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 32,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_STRENGTH_MINI_APPS",
+        "desc": "小程序活跃人数",
+        "options": [
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "丝芙兰/SEPHORA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "祖·玛珑/JO MALONE",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      },
+      {
+        "name": "QUOTA_STRENGTH_MIND_SHARE",
+        "desc": "心智份额",
+        "options": [
+          {
+            "name": "莱珀妮/LA PRAIRIE",
+            "no": 1,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "丝芙兰/SEPHORA",
+            "no": 2,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "娇韵诗/CLARINS",
+            "no": 3,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "祖·玛珑/JO MALONE",
+            "no": 4,
+            "is_cur": false,
+            "dod": 0
+          },
+          {
+            "name": "香奈儿/Chanel",
+            "no": 5,
+            "is_cur": true,
+            "dod": 0
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "metrics": [
+    {
+      "key": "reach_exposure",
+      "name": "触达曝光",
+      "rank": [
+        {
+          "key": "r0_rate_rank_value",
+          "name": "推荐人群渗透率",
+          "tips": "",
+          "rank": [
+            {
+              "key": "industry_r0_rate_rank_value",
+              "name": "行业优选人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 该行业所有优选人群并集）/ 该行业所有优选人群并集",
+              "rank": []
+            },
+            {
+              "key": "cosmetic_ingredient_enthusiasts_rank_value",
+              "name": "美妆功效成分党人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆功效成分党人群）/ 美妆功效成分党人群",
+              "rank": []
+            },
+            {
+              "key": "cosmetics_male_audience_rank_value",
+              "name": "美妆男性向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆男性向产品人群）/ 美妆男性向产品人群",
+              "rank": []
+            },
+            {
+              "key": "cosmetics_mature_audience_rank_value",
+              "name": "美妆熟龄向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆熟龄向产品人群）/ 美妆熟龄向产品人群",
+              "rank": []
+            },
+            {
+              "key": "cosmetics_urban_female_audience_rank_value",
+              "name": "美妆城市女性向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆城市女性向产品人群）/ 美妆城市女性向产品人群",
+              "rank": []
+            },
+            {
+              "key": "cosmetics_small_town_female_audience_rank_value",
+              "name": "美妆小镇女性向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆小镇女性向产品人群）/ 美妆小镇女性向产品人群",
+              "rank": []
+            },
+            {
+              "key": "cosmetics_industry_prospect_rank_value",
+              "name": "美妆行业意向人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 美妆行业意向人群）/ 美妆行业意向人群",
+              "rank": []
+            },
+            {
+              "key": "luxury_beauty_mature_audience_rank_value",
+              "name": "奢美熟龄向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 奢美熟龄向产品人群）/ 奢美熟龄向产品人群",
+              "rank": []
+            },
+            {
+              "key": "luxury_beauty_male_audience_rank_value",
+              "name": "奢美男性向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 奢美男性向产品人群）/ 奢美男性向产品人群",
+              "rank": []
+            },
+            {
+              "key": "luxury_beauty_female_audience_rank_value",
+              "name": "奢美女性向产品人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 奢美女性向产品人群）/ 奢美女性向产品人群",
+              "rank": []
+            },
+            {
+              "key": "gift_giving_audience_rank_value",
+              "name": "心意礼赠人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 心意礼赠人群）/ 心意礼赠人群",
+              "rank": []
+            },
+            {
+              "key": "romantic_gift_audience_rank_value",
+              "name": "浪漫礼赠人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 浪漫礼赠人群）/ 浪漫礼赠人群",
+              "rank": []
+            },
+            {
+              "key": "perfume_core_audience_rank_value",
+              "name": "香水核心人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 香水核心人群）/ 香水核心人群",
+              "rank": []
+            },
+            {
+              "key": "skincare_interest_rank_value",
+              "name": "护肤品兴趣人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 护肤品兴趣人群）/ 护肤品兴趣人群",
+              "rank": []
+            },
+            {
+              "key": "makeup_interest_rank_value",
+              "name": "彩妆兴趣人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 彩妆兴趣人群）/ 彩妆兴趣人群",
+              "rank": []
+            },
+            {
+              "key": "luxury_beauty_intent_rank_value",
+              "name": "奢美意向人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 奢美意向人群）/ 奢美意向人群",
+              "rank": []
+            },
+            {
+              "key": "hard_luxury_intent_rank_value",
+              "name": "硬奢人群渗透率",
+              "tips": "（品牌每日5R人群并集 ∩ 硬奢人群）/ 硬奢人群",
+              "rank": []
+            }
+          ]
+        },
+        {
+          "key": "total_5r_cnt_rank_value",
+          "name": "5R人群数",
+          "tips": "统计周期内，每日5R人群汇总并去重后的总人数",
+          "rank": []
+        },
+        {
+          "key": "ad_show_cnt_rank_value",
+          "name": "广告曝光次数",
+          "tips": "统计周期内，品牌的广告（不含互选）的曝光次数累加",
+          "rank": []
+        },
+        {
+          "key": "hx_read_cnt_rank_value",
+          "name": "互选观看次数",
+          "tips": "统计周期内，品牌互选视频号播放和公众号阅读次数累加",
+          "rank": []
+        },
+        {
+          "key": "touch_cnt_rank_value",
+          "name": "触达数",
+          "tips": "所选时间段内，品牌关联内容的阅读曝光次数加总，含品牌的广告曝光次数，互选广告播放/阅读次数，及完成品牌识别的自然内容播放/阅读次数",
+          "rank": []
+        },
+        {
+          "key": "content_pub_cnt_rank_value",
+          "name": "新发布内容数",
+          "tips": "所选时间段内，发布的互选内容数及完成品牌识别的自然内容数，如互选视频号短视频及公众号文章内容",
+          "rank": []
+        }
+      ]
+    },
+    {
+      "key": "interactive",
+      "name": "种草互动",
+      "rank": [
+        {
+          "key": "r3_flow_in_complex_rank_value",
+          "name": "R3流入综合指数",
+          "tips": "综合指数统计R3流入率排名及R3流入人数排名两项指标，权重占比各50%进行排名",
+          "rank": []
+        },
+        {
+          "key": "r3_flow_in_cnt_rank_value",
+          "name": "R3流入人数",
+          "tips": "统计周期前一天低于R3 且 统计周期内最深状态为R3状态的人数",
+          "rank": []
+        },
+        {
+          "key": "r3_flow_in_rate_rank_value",
+          "name": "R3流入率",
+          "tips": "R3流入人数 / 统计周期前一天状态低于R3的人数",
+          "rank": []
+        },
+        {
+          "key": "total_r3_cnt_rank_value",
+          "name": "R3人群数",
+          "tips": "统计周期内，每日R3人群汇总并去重后的总人数",
+          "rank": []
+        },
+        {
+          "key": "search_cnt_rank_value",
+          "name": "搜索数",
+          "tips": "所选时间段内，完成品牌识别的品牌词搜索次数，含搜一搜及浏览器",
+          "rank": []
+        },
+        {
+          "key": "interactive_cnt_rank_value",
+          "name": "互动数",
+          "tips": "所选时间段内，品牌的广告，互选及完成品牌识别的自然内容互动次数，含点赞，评论，转发，收藏等互动行为",
+          "rank": []
+        },
+        {
+          "key": "hx_interactive_cnt_rank_value",
+          "name": "互选互动次数",
+          "tips": "所选周期内，品牌互选商单的互动次数",
+          "rank": []
+        }
+      ]
+    },
+    {
+      "key": "effect_conversion",
+      "name": "效果转化",
+      "rank": [
+        {
+          "key": "r4r5_flow_in_complex_rank_value",
+          "name": "R4R5流入综合指数",
+          "tips": "综合指数统计R4R5流入率排名及R4R5流入人数排名两项指标，权重占比各50%进行排名",
+          "rank": []
+        },
+        {
+          "key": "r4r5_flow_in_cnt_rank_value",
+          "name": "R4R5流入人数",
+          "tips": "统计周期前一天低于R4 且 统计周期内最深状态为R45状态的人数",
+          "rank": []
+        },
+        {
+          "key": "r4r5_flow_in_rate_rank_value",
+          "name": "R4R5流入率",
+          "tips": "R4R5流入人数 / 统计周期前一天状态低于R4的人数",
+          "rank": []
+        },
+        {
+          "key": "total_r4r5_cnt_rank_value",
+          "name": "R4R5人群数",
+          "tips": "统计周期内，每日R4R5人群汇总并去重后的总人数",
+          "rank": []
+        },
+        {
+          "key": "ad_ctr_rank_value",
+          "name": "广告CTR",
+          "tips": "广告点击次数 / 广告曝光次数",
+          "rank": []
+        },
+        {
+          "key": "hx_exp_ctr_rank_value",
+          "name": "互选组件点击率",
+          "tips": "互选组件曝光次数 / 互选组件",
+          "rank": []
+        },
+        {
+          "key": "ad_click_cnt_rank_value",
+          "name": "点击数",
+          "tips": "所选时间段内，广告点击次数，含互选组件点击次数",
+          "rank": []
+        }
+      ]
+    }
+  ],
+  "x_default": "industry_r0_rate_rank_value",
+  "y_default": "r3_flow_in_cnt_rank_value",
+  "round_default": "r4r5_flow_in_cnt_rank_value",
+  "oldest_week_start": "20250203",
+  "oldest_week_end": "20250209",
+  "oldest_month": "202502",
+  "latest_week_start": "20260413",
+  "latest_week_end": "20260419",
+  "latest_month": "202603",
+  "is_luxury": false,
+  "brand_type": "fashion",
+  "cpt": [
+    {
+      "brand_id": "1000039",
+      "brand_name": "海蓝之谜/LA MER"
+    },
+    {
+      "brand_id": "1000042",
+      "brand_name": "赫莲娜/HELENA RUBINSTEIN"
+    },
+    {
+      "brand_id": "1000057",
+      "brand_name": "莱珀妮/LA PRAIRIE"
+    },
+    {
+      "brand_id": "1000043",
+      "brand_name": "兰蔻/LANCOME"
+    },
+    {
+      "brand_id": "1000037",
+      "brand_name": "雅诗兰黛/Estee Lauder"
+    },
+    {
+      "brand_id": "1000116",
+      "brand_name": "迪奥/DIOR"
+    }
+  ],
+  "oldest_quarter": "2025Q2",
+  "latest_quarter": "2026Q1"
+}
