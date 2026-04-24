@@ -40,3 +40,5 @@ npm run typecheck  # 可选：全量 tsc
 作为子模块位于 `one-design-next/external/wxad-od-template` 时，与文档站共用 `src/blocks/`、`src/workshop/`。
 
 克隆父仓库：`git submodule update --init --recursive`。
+
+**`@tencent/retail-ai-lib`** 会把 React 16 装在自身 `node_modules` 下，导致与模板 React 19 双实例、页面白屏（Invalid hook call）。安装后 **`postinstall`** 会删掉该嵌套副本；若你禁用了 scripts，请手删 `node_modules/@tencent/retail-ai-lib/node_modules` 下的 `react` / `react-dom` / `scheduler`。
