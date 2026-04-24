@@ -10,7 +10,7 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useState } from 'react';
-import { ReviewMasterDetailLayout } from '../../../../skills/p2-block-catalog/references/review-master-detail-layout';
+import { ReviewMasterDetailLayout } from '../blocks/review-master-detail-layout';
 import reviewPageFixture from './data/review-page.json';
 
 // 本地 fixtures，避免预览域等非 localhost 来源被 CDN CORS 拦截

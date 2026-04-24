@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
 // @ts-expect-error dumi data import
-import rawBenchmark from '../../../../.dumi/data/benchmark.json';
+import rawBenchmark from './data/benchmark-site.json';
 
 interface SoftDimension {
   score: number;

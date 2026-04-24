@@ -14,7 +14,7 @@ import {
   type TableSortOrder,
 } from 'one-design-next';
 import React, { useMemo, useState } from 'react';
-import { NotificationPopoverTrigger } from '../../../../components/popover/demo/notification-popover-trigger';
+import { NotificationPopoverTrigger } from '../blocks/_internal/notification-popover-trigger';
 
 const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量'];
 

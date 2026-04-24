@@ -15,8 +15,8 @@ import {
   COMPETITOR_QUADRANTS,
   GROWTH_QUADRANTS,
   MatrixScatterChart,
-} from '../../../../skills/p2-block-catalog/references/quadrant-scatter';
-import { MindTreemapD3 } from '../../../../skills/p2-block-catalog/references/treemap-panel';
+} from '../blocks/quadrant-scatter';
+import { MindTreemapD3 } from '../blocks/treemap-panel';
 import brandMindDashboardFixture from './data/brand-mind-dashboard.json';
 
 // 本地 fixtures，避免预览域等非 localhost 来源被 CDN CORS 拦截

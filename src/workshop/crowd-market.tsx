@@ -12,7 +12,7 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useMemo, useRef, useState } from 'react';
-import CrowdCardListBlock from '../../../../skills/p2-block-catalog/references/crowd-card-list';
+import CrowdCardListBlock from '../blocks/crowd-card-list';
 
 const NAV_ITEMS = [
   '首页',

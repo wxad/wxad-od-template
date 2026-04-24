@@ -1,0 +1,4391 @@
+{
+  "config": {
+    "version": "3.0",
+    "hardGate": {
+      "odn-compliance-min": 20,
+      "forbidden-violations": 0,
+      "core-patterns-required": true,
+      "parseable": true
+    },
+    "softDimensions": {
+      "component-identity": {
+        "label": "组件身份一致性",
+        "max": 20
+      },
+      "business-understanding": {
+        "label": "业务意图理解",
+        "max": 25
+      },
+      "design-language": {
+        "label": "设计语言一致性",
+        "max": 20
+      },
+      "state-coverage": {
+        "label": "多状态覆盖",
+        "max": 10
+      },
+      "implementability": {
+        "label": "工程可实现性",
+        "max": 15
+      },
+      "robustness": {
+        "label": "稳定性",
+        "max": 10
+      }
+    },
+    "riskThresholds": {
+      "low": {
+        "passScore": 65,
+        "regressTolerance": 5
+      },
+      "medium": {
+        "passScore": 70,
+        "regressTolerance": 3
+      },
+      "high": {
+        "passScore": 80,
+        "regressTolerance": 0
+      }
+    },
+    "datasetWeights": {
+      "gold": 1,
+      "regression": 1,
+      "failure": 0.8,
+      "exploration": 0.5
+    }
+  },
+  "testSets": {
+    "audience-list": {
+      "id": "audience-list",
+      "name": "智能人群列表",
+      "dataset": "gold",
+      "riskLevel": "low",
+      "tags": [
+        "列表页",
+        "CRUD",
+        "核心场景"
+      ],
+      "prompt": "如翼人群策略模块中的智能人群生产列表，支持按计算状态筛选、搜索人群，表格展示人群名称、商品/营销节点、状态、规模、创建时间和操作",
+      "skill": "audience-list",
+      "category": "list",
+      "difficulty": "medium",
+      "persona": "P90",
+      "personaDescription": "熟悉 AD UI 的资深设计师，使用系统生成典型列表页",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Table",
+          "Input",
+          "Select",
+          "Pagination",
+          "Button"
+        ],
+        "requiredPatterns": [
+          "筛选条件栏",
+          "数据表格",
+          "分页"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 人群策略 → 智能人群列表"
+      },
+      "roleMapping": {
+        "筛选区": {
+          "components": [
+            "Select",
+            "Input"
+          ],
+          "pattern": "header|toolbar|filter|筛选"
+        },
+        "数据区": {
+          "components": [
+            "Table"
+          ],
+          "pattern": "table|list|数据"
+        },
+        "操作区": {
+          "components": [
+            "Button"
+          ],
+          "pattern": "action|操作|新建|删除"
+        },
+        "分页区": {
+          "components": [
+            "Pagination"
+          ],
+          "pattern": "pagination|pager|分页"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "表格包含人群名称列",
+          "signature": "人群名称|name|群名",
+          "weight": 2
+        },
+        {
+          "item": "表格包含状态列",
+          "signature": "status|状态|计算状态",
+          "weight": 2
+        },
+        {
+          "item": "表格包含规模列",
+          "signature": "规模|scale|size|人数",
+          "weight": 2
+        },
+        {
+          "item": "表格包含创建时间列",
+          "signature": "创建时间|createTime|createdAt",
+          "weight": 1
+        },
+        {
+          "item": "支持搜索功能",
+          "signature": "search|搜索|Search|onSearch",
+          "weight": 2
+        },
+        {
+          "item": "支持状态筛选",
+          "signature": "Select|select|筛选|filter",
+          "weight": 2
+        },
+        {
+          "item": "操作列含编辑/删除",
+          "signature": "编辑|删除|edit|delete|操作",
+          "weight": 1
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData",
+          "required": true
+        },
+        "error": {
+          "signature": "error|Error|失败|重试|retry",
+          "required": false
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 3,
+        "expectedVariants": {
+          "Button": [
+            "primary",
+            "default"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "docs-pages/workshop/demo/audience-list.tsx",
+      "failureHistory": [
+        {
+          "runId": "2026-04-13_v2",
+          "date": "2026-04-13",
+          "verdict": "regressed",
+          "reason": "软分低于上轮且超出容忍阈值"
+        }
+      ]
+    },
+    "color-token-drift": {
+      "id": "color-token-drift",
+      "name": "色值Token漂移修复",
+      "dataset": "regression",
+      "riskLevel": "high",
+      "tags": [
+        "回归",
+        "Token",
+        "色值",
+        "设计语言",
+        "历史修复"
+      ],
+      "sourceCase": "home",
+      "regressionRun": "2025-03-28_v1",
+      "regressionReason": "AI 生成的工作台首页使用了大量硬编码色值（#333、#666、#999），而非 ODN Design Token，导致暗色模式和品牌色切换时样式失效",
+      "prompt": "做一个如翼风格的工作台首页，顶部展示核心 KPI 指标卡，中部展示趋势图，底部展示排行表格",
+      "skill": "home",
+      "category": "dashboard",
+      "difficulty": "medium",
+      "persona": "P50",
+      "personaDescription": "新入职设计师，验证 Token 使用规范是否仍被遵守",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Card",
+          "Table"
+        ],
+        "requiredPatterns": [
+          "指标卡",
+          "数据表格"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 首页 → 工作台 → 首页"
+      },
+      "roleMapping": {
+        "指标展示区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "kpi|指标|metric|card"
+        },
+        "数据区": {
+          "components": [
+            "Table"
+          ],
+          "pattern": "table|rank|排行"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "色值使用 Token 变量",
+          "signature": "var\\(--odn|token|Token",
+          "weight": 5
+        },
+        {
+          "item": "无硬编码色值超过3处",
+          "signature": "#[0-9a-fA-F]{6}",
+          "weight": 4
+        },
+        {
+          "item": "指标卡颜色用语义色",
+          "signature": "success|warning|error|info|primary",
+          "weight": 3
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data",
+          "required": false
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 5,
+        "expectedVariants": {}
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "failureHistory": [
+        {
+          "runId": "2025-03-28_v1",
+          "date": "2025-03-28",
+          "verdict": "FAIL",
+          "reason": "发现 18 处硬编码色值，Token 使用率 0%"
+        },
+        {
+          "runId": "2026-04-05_v1",
+          "date": "2026-04-05",
+          "verdict": "improved",
+          "reason": "修复后 Token 使用率提升至 72%"
+        }
+      ]
+    },
+    "icon-source-violation": {
+      "id": "icon-source-violation",
+      "name": "图标来源违规修复",
+      "dataset": "regression",
+      "riskLevel": "high",
+      "tags": [
+        "回归",
+        "图标",
+        "ODN合规",
+        "历史修复"
+      ],
+      "sourceCase": "multi-step-config",
+      "regressionRun": "2026-04-01_v1",
+      "regressionReason": "AI 在多步骤投放配置页使用了 lucide-react 图标库，而非 AD UI 内置图标组件，导致开发侧无法复用",
+      "prompt": "做一个如翼风格的多步骤投放配置页，分步完成目标与预算、定向与出价、预览确认，每步有表单与前进/后退",
+      "skill": "multi-step-config",
+      "category": "config",
+      "difficulty": "medium",
+      "persona": "P90",
+      "personaDescription": "资深设计师，验证图标来源合规性是否仍保持正确",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Table",
+          "Tabs",
+          "Pagination",
+          "Input",
+          "Button"
+        ],
+        "requiredPatterns": [
+          "Tab 切换",
+          "数据表格",
+          "搜索过滤",
+          "CRUD 操作"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值",
+          "react-icons"
+        ],
+        "sitemap": "如翼平台 → 策略应用 → 多步骤投放配置"
+      },
+      "roleMapping": {
+        "导航区": {
+          "components": [
+            "Tabs"
+          ],
+          "pattern": "tabs|tab|切换"
+        },
+        "数据区": {
+          "components": [
+            "Table"
+          ],
+          "pattern": "table|list|数据"
+        },
+        "操作区": {
+          "components": [
+            "Button"
+          ],
+          "pattern": "action|操作|新建|编辑|删除"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "未使用 lucide-react",
+          "signature": "lucide-react",
+          "weight": 5
+        },
+        {
+          "item": "未使用 react-icons",
+          "signature": "react-icons",
+          "weight": 5
+        },
+        {
+          "item": "图标使用 ADIcon 或 SVG 内联",
+          "signature": "ADIcon|Icon|icon|svg",
+          "weight": 3
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data",
+          "required": false
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 3,
+        "expectedVariants": {
+          "Button": [
+            "primary",
+            "default",
+            "text"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "failureHistory": [
+        {
+          "runId": "2026-04-01_v1",
+          "date": "2026-04-01",
+          "verdict": "FAIL",
+          "reason": "使用了 lucide-react 外部图标库"
+        },
+        {
+          "runId": "2026-04-08_v1",
+          "date": "2026-04-08",
+          "verdict": "unchanged",
+          "reason": "修复后通过"
+        }
+      ]
+    },
+    "table-empty-state": {
+      "id": "table-empty-state",
+      "name": "表格空状态修复",
+      "dataset": "regression",
+      "riskLevel": "medium",
+      "tags": [
+        "回归",
+        "空状态",
+        "Table",
+        "历史修复"
+      ],
+      "sourceCase": "audience-list",
+      "regressionRun": "2025-03-15_v1",
+      "regressionReason": "AI 生成的列表页未处理空数据状态，Table 数据源为空时页面白屏，缺少 Empty 提示组件",
+      "prompt": "如翼人群策略模块中的智能人群生产列表，支持按计算状态筛选、搜索人群，表格展示人群名称、商品/营销节点、状态、规模、创建时间和操作",
+      "skill": "audience-list",
+      "category": "list",
+      "difficulty": "medium",
+      "persona": "P50",
+      "personaDescription": "新入职设计师，验证空状态场景是否仍被正确处理",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Table",
+          "Input",
+          "Select",
+          "Pagination",
+          "Button"
+        ],
+        "requiredPatterns": [
+          "筛选条件栏",
+          "数据表格",
+          "分页"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 人群策略 → 智能人群列表"
+      },
+      "roleMapping": {
+        "筛选区": {
+          "components": [
+            "Select",
+            "Input"
+          ],
+          "pattern": "header|toolbar|filter|筛选"
+        },
+        "数据区": {
+          "components": [
+            "Table"
+          ],
+          "pattern": "table|list|数据"
+        },
+        "分页区": {
+          "components": [
+            "Pagination"
+          ],
+          "pattern": "pagination|pager|分页"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "空数据时展示 Empty 组件",
+          "signature": "Empty|empty|暂无数据|no.*data|noData|emptyText",
+          "weight": 5
+        },
+        {
+          "item": "表格有 loading 状态",
+          "signature": "loading|Spin|Skeleton|加载",
+          "weight": 3
+        },
+        {
+          "item": "筛选后无结果时有提示",
+          "signature": "暂无|no.*result|empty|未找到",
+          "weight": 2
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData|emptyText",
+          "required": true
+        },
+        "error": {
+          "signature": "error|Error|失败|重试|retry",
+          "required": true
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 2,
+        "expectedVariants": {}
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "failureHistory": [
+        {
+          "runId": "2025-03-15_v1",
+          "date": "2025-03-15",
+          "verdict": "FAIL",
+          "reason": "Table 空数据时白屏，缺少 Empty 组件"
+        },
+        {
+          "runId": "2025-03-22_v1",
+          "date": "2025-03-22",
+          "verdict": "unchanged",
+          "reason": "修复后通过，空状态正确展示"
+        }
+      ]
+    },
+    "asset-flow": {
+      "id": "asset-flow",
+      "name": "资产流转",
+      "dataset": "failure",
+      "riskLevel": "high",
+      "tags": [
+        "仪表盘",
+        "数据可视化",
+        "桑基图",
+        "长尾场景"
+      ],
+      "prompt": "做一个如翼风格的品牌资产流转分析页面，支持按日期对比不同时段的资产变化，展示拉新、蓄水、种草三个核心指标及行业均值对比，用桑基图展示 5R 人群资产的流转关系",
+      "skill": "asset-flow",
+      "category": "dashboard",
+      "difficulty": "hard",
+      "persona": "P50",
+      "personaDescription": "入职 3 个月的设计师，首次制作带数据可视化的仪表盘",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "DateRangePicker",
+          "Card",
+          "Tabs"
+        ],
+        "requiredPatterns": [
+          "指标卡",
+          "桑基图",
+          "日期对比"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 资产洞察 → 资产流转"
+      },
+      "roleMapping": {
+        "日期筛选区": {
+          "components": [
+            "DateRangePicker"
+          ],
+          "pattern": "date|日期|时段|对比"
+        },
+        "指标展示区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "kpi|指标|metric|card|拉新|蓄水|种草"
+        },
+        "图表区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "chart|sankey|桑基|图表|流转"
+        },
+        "维度切换区": {
+          "components": [
+            "Tabs"
+          ],
+          "pattern": "tabs|tab|切换|维度"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "展示拉新指标",
+          "signature": "拉新|acquisition|R1",
+          "weight": 3
+        },
+        {
+          "item": "展示蓄水指标",
+          "signature": "蓄水|nurture|R2",
+          "weight": 3
+        },
+        {
+          "item": "展示种草指标",
+          "signature": "种草|engage|R3",
+          "weight": 3
+        },
+        {
+          "item": "行业均值对比",
+          "signature": "行业均值|industry|benchmark|对比|均值",
+          "weight": 2
+        },
+        {
+          "item": "5R人群资产流转",
+          "signature": "5R|R1.*R5|流转|人群资产",
+          "weight": 2
+        },
+        {
+          "item": "日期范围选择",
+          "signature": "DateRangePicker|dateRange|日期|时段",
+          "weight": 2
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData",
+          "required": true
+        },
+        "error": {
+          "signature": "error|Error|失败|重试|retry",
+          "required": true
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 5,
+        "expectedVariants": {
+          "Card": [
+            "default"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "docs-pages/workshop/demo/asset-flow.tsx",
+      "failureHistory": [
+        {
+          "runId": "2026-04-13_v2",
+          "date": "2026-04-13",
+          "verdict": "FAIL",
+          "reason": "ODN 合规分 8 < 最低线 20"
+        }
+      ]
+    },
+    "conversion-review": {
+      "id": "conversion-review",
+      "name": "转化复盘",
+      "dataset": "failure",
+      "riskLevel": "high",
+      "tags": [
+        "详情页",
+        "主从布局",
+        "多Tab",
+        "复杂交互"
+      ],
+      "prompt": "做一个如翼风格的转化复盘页面，左侧展示报告列表支持搜索和翻页，右侧展示报告详情，可切换查看概览、资产广度/深度/偏好度、配置信息等维度，配置信息里需要区分合约/互选/竞价广告类型并展示账户列表",
+      "skill": "conversion-review",
+      "category": "detail",
+      "difficulty": "hard",
+      "persona": "P90",
+      "personaDescription": "熟悉 AD UI 的资深设计师，使用系统生成复杂主从布局页面",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Table",
+          "Tabs",
+          "Input",
+          "Pagination",
+          "Card"
+        ],
+        "requiredPatterns": [
+          "主从布局",
+          "Tab 切换",
+          "搜索过滤"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 效果洞察 → 转化复盘"
+      },
+      "roleMapping": {
+        "列表区": {
+          "components": [
+            "Table",
+            "Input",
+            "Pagination"
+          ],
+          "pattern": "list|左侧|报告列表|master"
+        },
+        "详情区": {
+          "components": [
+            "Card",
+            "Tabs"
+          ],
+          "pattern": "detail|右侧|报告详情|content"
+        },
+        "维度切换区": {
+          "components": [
+            "Tabs"
+          ],
+          "pattern": "tabs|概览|资产广度|偏好度|配置"
+        },
+        "搜索区": {
+          "components": [
+            "Input"
+          ],
+          "pattern": "search|搜索|filter|筛选"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "左右主从布局结构",
+          "signature": "flex|grid|左.*右|master.*detail|split|aside",
+          "weight": 3
+        },
+        {
+          "item": "左侧报告列表可搜索",
+          "signature": "search|搜索|Search|onSearch",
+          "weight": 2
+        },
+        {
+          "item": "左侧报告列表可翻页",
+          "signature": "Pagination|pagination|pageSize|分页",
+          "weight": 1
+        },
+        {
+          "item": "右侧概览维度",
+          "signature": "概览|overview|summary",
+          "weight": 2
+        },
+        {
+          "item": "资产广度/深度/偏好度维度",
+          "signature": "广度|深度|偏好度|breadth|depth|preference",
+          "weight": 2
+        },
+        {
+          "item": "配置信息区分广告类型",
+          "signature": "合约|互选|竞价|contract|auction|bidding",
+          "weight": 3
+        },
+        {
+          "item": "账户列表展示",
+          "signature": "账户|account|accountList",
+          "weight": 1
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": true
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData",
+          "required": true
+        },
+        "error": {
+          "signature": "error|Error|失败|重试|retry",
+          "required": true
+        },
+        "selected": {
+          "signature": "selected|active|选中|当前|current",
+          "required": true
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 5,
+        "expectedVariants": {
+          "Button": [
+            "primary",
+            "default",
+            "text"
+          ],
+          "Card": [
+            "default"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "docs-pages/workshop/demo/conversion-review.tsx",
+      "failureHistory": [
+        {
+          "runId": "2026-04-13_v2",
+          "date": "2026-04-13",
+          "verdict": "FAIL",
+          "reason": "业务模块缺失：主从布局"
+        }
+      ]
+    },
+    "multi-step-config": {
+      "id": "multi-step-config",
+      "name": "多步骤投放配置",
+      "dataset": "failure",
+      "riskLevel": "high",
+      "tags": [
+        "表单",
+        "多步骤",
+        "复杂交互",
+        "长尾场景"
+      ],
+      "prompt": "做一个如翼风格的广告投放配置页面，分三个步骤：第一步选择投放目标和预算，第二步配置定向人群和出价策略，第三步预览投放方案并确认提交。每步之间支持前进后退，已填信息需保留",
+      "skill": "multi-step-config",
+      "category": "config",
+      "difficulty": "hard",
+      "persona": "P50",
+      "personaDescription": "入职 3 个月的设计师，首次制作多步骤复杂表单",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Button",
+          "Select",
+          "Card"
+        ],
+        "requiredPatterns": [
+          "配置面板"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 投放管理 → 新建广告 → 投放配置"
+      },
+      "roleMapping": {
+        "步骤导航区": {
+          "components": [],
+          "pattern": "step|Steps|步骤|阶段|progress"
+        },
+        "表单区": {
+          "components": [
+            "Select",
+            "Card"
+          ],
+          "pattern": "form|配置|投放目标|预算|定向|出价"
+        },
+        "操作区": {
+          "components": [
+            "Button"
+          ],
+          "pattern": "上一步|下一步|提交|确认|prev|next|submit"
+        },
+        "预览区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "preview|预览|方案|确认"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "三步骤结构",
+          "signature": "step|Steps|步骤|第一步|第二步|第三步|step.*1|step.*2|step.*3",
+          "weight": 4
+        },
+        {
+          "item": "投放目标选择",
+          "signature": "投放目标|objective|goal|target",
+          "weight": 3
+        },
+        {
+          "item": "预算配置",
+          "signature": "预算|budget|金额",
+          "weight": 3
+        },
+        {
+          "item": "定向人群配置",
+          "signature": "定向|targeting|人群|audience",
+          "weight": 3
+        },
+        {
+          "item": "出价策略配置",
+          "signature": "出价|bid|策略|strategy",
+          "weight": 2
+        },
+        {
+          "item": "方案预览",
+          "signature": "预览|preview|确认|summary|方案",
+          "weight": 3
+        },
+        {
+          "item": "前进后退按钮",
+          "signature": "上一步|下一步|prev|next|back|forward",
+          "weight": 2
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": false
+        },
+        "validation": {
+          "signature": "校验|validate|error|必填|required|invalid",
+          "required": true
+        },
+        "success": {
+          "signature": "成功|success|提交成功|完成",
+          "required": true
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 3,
+        "expectedVariants": {
+          "Button": [
+            "primary",
+            "default"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "docs-pages/workshop/demo/multi-step-config.tsx",
+      "failureHistory": []
+    },
+    "audience-strategy": {
+      "id": "audience-strategy",
+      "name": "推荐人群",
+      "dataset": "exploration",
+      "riskLevel": "medium",
+      "tags": [
+        "仪表盘",
+        "筛选",
+        "探索性"
+      ],
+      "prompt": "做一个广告投放的人群策略配置面板，支持选择定向维度和人群包，可以按年龄、性别筛选目标人群，并实时展示预估覆盖人数",
+      "skill": "audience-strategy",
+      "category": "dashboard",
+      "difficulty": "medium",
+      "persona": "P90",
+      "personaDescription": "熟悉 AD UI 的资深设计师，使用系统生成典型人群策略页面",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Select",
+          "Radio",
+          "Card"
+        ],
+        "requiredPatterns": [
+          "筛选条件栏",
+          "指标卡"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 人群策略 → 推荐人群"
+      },
+      "roleMapping": {
+        "筛选区": {
+          "components": [
+            "Select",
+            "Radio"
+          ],
+          "pattern": "filter|筛选|定向|维度|年龄|性别"
+        },
+        "指标展示区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "card|指标|覆盖人数|预估|metric"
+        },
+        "内容区": {
+          "components": [
+            "RuyiLayout"
+          ],
+          "pattern": "layout|content|主体"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "定向维度选择",
+          "signature": "定向|维度|dimension|targeting",
+          "weight": 3
+        },
+        {
+          "item": "人群包选择",
+          "signature": "人群包|audience.*pack|package",
+          "weight": 2
+        },
+        {
+          "item": "年龄筛选",
+          "signature": "年龄|age",
+          "weight": 2
+        },
+        {
+          "item": "性别筛选",
+          "signature": "性别|gender|男|女",
+          "weight": 2
+        },
+        {
+          "item": "预估覆盖人数展示",
+          "signature": "覆盖人数|预估|estimate|coverage|reach",
+          "weight": 3
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": false
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData",
+          "required": false
+        },
+        "error": {
+          "signature": "error|Error|失败|重试|retry",
+          "required": false
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 2,
+        "expectedVariants": {
+          "Button": [
+            "primary"
+          ]
+        }
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "docs-pages/workshop/demo/audience-strategy.tsx",
+      "failureHistory": [
+        {
+          "runId": "2026-04-13_v2",
+          "date": "2026-04-13",
+          "verdict": "FAIL",
+          "reason": "ODN 合规分 8 < 最低线 20；业务模块缺失：筛选条件栏"
+        }
+      ]
+    },
+    "r0-audience-market": {
+      "id": "r0-audience-market",
+      "name": "推荐人群市场",
+      "dataset": "exploration",
+      "riskLevel": "medium",
+      "tags": [
+        "人群策略",
+        "可视化",
+        "卡片列表",
+        "探索性"
+      ],
+      "prompt": "如翼人群策略模块的推荐人群市场页面，包含涟漪图（相似人群探索可视化）和人群卡片列表（行业优选/兴趣精选/主题甄选）两大区块",
+      "skill": "r0-audience-market",
+      "category": "dashboard",
+      "difficulty": "medium",
+      "persona": "P50",
+      "personaDescription": "刚接触如翼平台的设计师，首次尝试生成人群市场页面",
+      "expectations": {
+        "requiredComponents": [
+          "RuyiLayout",
+          "Card",
+          "Tabs"
+        ],
+        "requiredPatterns": [
+          "涟漪图",
+          "人群卡片列表"
+        ],
+        "forbiddenPatterns": [
+          "lucide-react",
+          "硬编码色值"
+        ],
+        "sitemap": "如翼平台 → 人群策略 → 推荐人群市场"
+      },
+      "roleMapping": {
+        "涟漪图区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "ripple|涟漪|相似人群|探索"
+        },
+        "分类切换": {
+          "components": [
+            "Tabs"
+          ],
+          "pattern": "tab|行业优选|兴趣精选|主题甄选"
+        },
+        "卡片列表区": {
+          "components": [
+            "Card"
+          ],
+          "pattern": "card|人群卡片|list|列表"
+        }
+      },
+      "businessChecklist": [
+        {
+          "item": "涟漪图可视化",
+          "signature": "涟漪|ripple|相似人群|可视化",
+          "weight": 3
+        },
+        {
+          "item": "行业优选分类",
+          "signature": "行业优选|industry",
+          "weight": 2
+        },
+        {
+          "item": "兴趣精选分类",
+          "signature": "兴趣精选|interest",
+          "weight": 2
+        },
+        {
+          "item": "主题甄选分类",
+          "signature": "主题甄选|theme",
+          "weight": 2
+        },
+        {
+          "item": "人群卡片信息展示",
+          "signature": "人群卡片|覆盖|规模|人数",
+          "weight": 3
+        }
+      ],
+      "expectedStates": {
+        "loading": {
+          "signature": "loading|Spin|Skeleton|加载",
+          "required": false
+        },
+        "empty": {
+          "signature": "Empty|empty|暂无|no.*data|noData",
+          "required": false
+        }
+      },
+      "tokenExpectations": {
+        "minTokenUsage": 2,
+        "expectedVariants": {}
+      },
+      "hardGate": {
+        "odn-compliance-min": 20,
+        "business-modules-complete": true,
+        "forbidden-violations": 0
+      },
+      "referenceAnswer": "external/wxad-od-template/src/workshop/crowd-market.tsx",
+      "failureHistory": []
+    }
+  },
+  "latest": {
+    "runId": "2026-04-13_demo",
+    "timestamp": "2026-04-13T10:30:00Z",
+    "configVersion": "3.0",
+    "strategyPack": {
+      "gitHash": "a1b2c3d",
+      "model": "claude-4",
+      "skillFiles": {
+        "p1-design-analyst/SKILL.md": "sha256:demo1234",
+        "p2-business-knowledge/SKILL.md": "sha256:demo5678",
+        "p2-one-design/SKILL.md": "sha256:demo9abc",
+        "p3-audit/SKILL.md": "sha256:demodef0"
+      },
+      "auditRules": "sha256:demog123",
+      "configVersion": "3.0"
+    },
+    "summary": {
+      "totalCases": 12,
+      "hardGatePassRate": "9/12",
+      "datasetSummary": {
+        "gold": {
+          "total": 4,
+          "hardGatePass": 4,
+          "avgSoftScore": 74,
+          "verdicts": {
+            "improved": 2,
+            "unchanged": 1,
+            "regressed": 1,
+            "FAIL": 0
+          }
+        },
+        "regression": {
+          "total": 3,
+          "hardGatePass": 2,
+          "avgSoftScore": 66,
+          "verdicts": {
+            "improved": 1,
+            "unchanged": 1,
+            "regressed": 0,
+            "FAIL": 1
+          }
+        },
+        "failure": {
+          "total": 3,
+          "hardGatePass": 1,
+          "avgSoftScore": 58,
+          "verdicts": {
+            "improved": 0,
+            "unchanged": 1,
+            "regressed": 0,
+            "FAIL": 2
+          }
+        },
+        "exploration": {
+          "total": 2,
+          "hardGatePass": 2,
+          "avgSoftScore": 71,
+          "verdicts": {
+            "improved": 1,
+            "unchanged": 1,
+            "regressed": 0,
+            "FAIL": 0
+          }
+        }
+      }
+    },
+    "cases": {
+      "audience-list": {
+        "dataset": "gold",
+        "riskLevel": "low",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 24,
+              "min": 20,
+              "issues": []
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "筛选条件栏",
+                "数据表格",
+                "分页"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 78,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 16,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 22,
+              "max": 25
+            },
+            "design-language": {
+              "score": 15,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 7,
+              "max": 10
+            },
+            "implementability": {
+              "score": 12,
+              "max": 15
+            },
+            "robustness": {
+              "score": 6,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "improved"
+      },
+      "account-settings": {
+        "dataset": "gold",
+        "riskLevel": "low",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 22,
+              "min": 20,
+              "issues": [
+                "个别 Icon 使用方式不规范"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "Tab 切换",
+                "数据表格",
+                "搜索过滤",
+                "CRUD 操作"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 71,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 14,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 19,
+              "max": 25
+            },
+            "design-language": {
+              "score": 14,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 6,
+              "max": 10
+            },
+            "implementability": {
+              "score": 11,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "unchanged"
+      },
+      "data-overview": {
+        "dataset": "gold",
+        "riskLevel": "low",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 21,
+              "min": 20,
+              "issues": [
+                "趋势图色板与 Token 轻微偏差"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "指标卡",
+                "数据表格"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 82,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 17,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 23,
+              "max": 25
+            },
+            "design-language": {
+              "score": 16,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 8,
+              "max": 10
+            },
+            "implementability": {
+              "score": 12,
+              "max": 15
+            },
+            "robustness": {
+              "score": 6,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "improved"
+      },
+      "campaign-list": {
+        "dataset": "gold",
+        "riskLevel": "low",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 20,
+              "min": 20,
+              "issues": [
+                "部分组件 props 使用不完整"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "筛选条件栏",
+                "数据表格",
+                "CRUD 操作",
+                "分页"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 65,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 12,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 18,
+              "max": 25
+            },
+            "design-language": {
+              "score": 13,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 5,
+              "max": 10
+            },
+            "implementability": {
+              "score": 10,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "regressed"
+      },
+      "table-empty-state": {
+        "dataset": "regression",
+        "riskLevel": "medium",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 23,
+              "min": 20,
+              "issues": []
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "筛选条件栏",
+                "数据表格",
+                "分页"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 72,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 14,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 18,
+              "max": 25
+            },
+            "design-language": {
+              "score": 14,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 9,
+              "max": 10
+            },
+            "implementability": {
+              "score": 11,
+              "max": 15
+            },
+            "robustness": {
+              "score": 6,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "improved"
+      },
+      "icon-source-violation": {
+        "dataset": "regression",
+        "riskLevel": "high",
+        "hardGate": {
+          "passed": false,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 21,
+              "min": 20,
+              "issues": []
+            },
+            "forbidden-violations": {
+              "passed": false,
+              "violations": [
+                "lucide-react"
+              ]
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "Tab 切换",
+                "数据表格",
+                "搜索过滤",
+                "CRUD 操作"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": null,
+        "verdict": "FAIL"
+      },
+      "color-token-drift": {
+        "dataset": "regression",
+        "riskLevel": "high",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 20,
+              "min": 20,
+              "issues": [
+                "仍有 3 处硬编码色值"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "指标卡",
+                "数据表格"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 60,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 12,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 16,
+              "max": 25
+            },
+            "design-language": {
+              "score": 10,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 5,
+              "max": 10
+            },
+            "implementability": {
+              "score": 10,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "unchanged"
+      },
+      "asset-flow": {
+        "dataset": "failure",
+        "riskLevel": "high",
+        "hardGate": {
+          "passed": false,
+          "details": {
+            "odn-compliance": {
+              "passed": false,
+              "score": 12,
+              "min": 20,
+              "issues": [
+                "桑基图使用了外部样式",
+                "指标卡色值大量硬编码",
+                "DateRangePicker 未引入"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": false,
+              "matched": [
+                "指标卡"
+              ],
+              "missing": [
+                "桑基图",
+                "日期对比"
+              ]
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": null,
+        "verdict": "FAIL"
+      },
+      "conversion-review": {
+        "dataset": "failure",
+        "riskLevel": "high",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 21,
+              "min": 20,
+              "issues": [
+                "表单项缺少 Form.Item 包裹"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "主从布局",
+                "Tab 切换",
+                "搜索过滤"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 58,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 11,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 16,
+              "max": 25
+            },
+            "design-language": {
+              "score": 11,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 4,
+              "max": 10
+            },
+            "implementability": {
+              "score": 9,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "unchanged"
+      },
+      "multi-step-config": {
+        "dataset": "failure",
+        "riskLevel": "high",
+        "hardGate": {
+          "passed": false,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 20,
+              "min": 20,
+              "issues": []
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": false,
+              "matched": [
+                "配置面板"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": false,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": false
+              }
+            }
+          }
+        },
+        "softScore": null,
+        "verdict": "FAIL"
+      },
+      "audience-strategy": {
+        "dataset": "exploration",
+        "riskLevel": "medium",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 22,
+              "min": 20,
+              "issues": [
+                "部分 Icon 未使用内置组件"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "筛选条件栏",
+                "指标卡"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 68,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 13,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 19,
+              "max": 25
+            },
+            "design-language": {
+              "score": 13,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 5,
+              "max": 10
+            },
+            "implementability": {
+              "score": 11,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "unchanged"
+      },
+      "audience-targeting": {
+        "dataset": "exploration",
+        "riskLevel": "medium",
+        "hardGate": {
+          "passed": true,
+          "details": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 21,
+              "min": 20,
+              "issues": [
+                "配置面板内有硬编码间距"
+              ]
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "violations": []
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "配置面板",
+                "实时预估"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 74,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 14,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 20,
+              "max": 25
+            },
+            "design-language": {
+              "score": 14,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 7,
+              "max": 10
+            },
+            "implementability": {
+              "score": 12,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "improved"
+      },
+      "r0-audience-market": {
+        "dataset": "exploration",
+        "riskLevel": "medium",
+        "hardGate": {
+          "passed": true,
+          "results": {
+            "odn-compliance": {
+              "passed": true,
+              "score": 35,
+              "threshold": 20
+            },
+            "forbidden-violations": {
+              "passed": true,
+              "count": 0,
+              "max": 0
+            },
+            "core-patterns-required": {
+              "passed": true,
+              "matched": [
+                "涟漪图",
+                "人群卡片列表"
+              ],
+              "missing": []
+            },
+            "parseable": {
+              "passed": true,
+              "details": {
+                "hasExport": true,
+                "hasJsx": true,
+                "balanced": true
+              }
+            }
+          }
+        },
+        "softScore": {
+          "total": 68,
+          "max": 100,
+          "breakdown": {
+            "component-identity": {
+              "score": 13,
+              "max": 20
+            },
+            "business-understanding": {
+              "score": 17,
+              "max": 25
+            },
+            "design-language": {
+              "score": 14,
+              "max": 20
+            },
+            "state-coverage": {
+              "score": 6,
+              "max": 10
+            },
+            "implementability": {
+              "score": 11,
+              "max": 15
+            },
+            "robustness": {
+              "score": 7,
+              "max": 10
+            }
+          }
+        },
+        "verdict": "new"
+      }
+    }
+  },
+  "history": [
+    {
+      "runId": "2026-04-13_v1",
+      "timestamp": "2026-04-13T05:19:23.010Z",
+      "strategyPack": null,
+      "summary": {
+        "totalScore": 80.8,
+        "passRate": "6/6",
+        "avgAuditScore": 94.1,
+        "avgBusinessScore": 72,
+        "p50Score": 83,
+        "p90Score": 85
+      }
+    },
+    {
+      "runId": "2026-04-13_v2",
+      "timestamp": "2026-04-13T06:00:21.666Z",
+      "strategyPack": {
+        "gitHash": "c8bc357",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": "sha256:436dbf66b730",
+        "configVersion": "2.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "3/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 71.5,
+            "verdicts": {
+              "improved": 1,
+              "unchanged": 0,
+              "regressed": 1,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 2
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 81,
+            "verdicts": {
+              "improved": 1,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "runId": "2026-04-13_v3",
+      "timestamp": "2026-04-13T06:14:57.978Z",
+      "strategyPack": {
+        "gitHash": "c8bc357",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": "sha256:436dbf66b730",
+        "configVersion": "3.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "3/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 68,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 1,
+              "regressed": 1,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 2
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 76,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 1,
+              "FAIL": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "runId": "baseline",
+      "timestamp": "2026-04-13T00:00:00Z",
+      "strategyPack": {
+        "gitHash": "initial",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": null,
+        "configVersion": "3.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "5/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 68.5,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 2,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 52,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 1,
+              "regressed": 0,
+              "FAIL": 1
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 60,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 2,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "runId": "2026-04-13_v1",
+      "timestamp": "2026-04-13T05:19:23.010Z",
+      "skillVersion": "c8bc357",
+      "summary": {
+        "totalScore": 80.8,
+        "passRate": "6/6",
+        "avgAuditScore": 94.1,
+        "avgBusinessScore": 72,
+        "p50Score": 83,
+        "p90Score": 85
+      },
+      "cases": {
+        "account-settings": {
+          "totalScore": 85,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Table",
+                "Tabs",
+                "Pagination",
+                "Input",
+                "Button"
+              ],
+              "missing": []
+            },
+            "pattern-hit": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "Tab 切换",
+                "数据表格",
+                "搜索过滤",
+                "CRUD 操作"
+              ],
+              "missing": []
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        },
+        "asset-flow": {
+          "totalScore": 79,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 12,
+              "max": 15,
+              "issues": [
+                "交互元素可能缺少 ARIA 标签"
+              ]
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 8,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Card"
+              ],
+              "missing": [
+                "DateRangePicker",
+                "Tabs"
+              ]
+            },
+            "pattern-hit": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "指标卡",
+                "桑基图",
+                "日期对比"
+              ],
+              "missing": []
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        },
+        "audience-list": {
+          "totalScore": 84,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 13,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Table",
+                "Input",
+                "Pagination",
+                "Button"
+              ],
+              "missing": [
+                "Select"
+              ]
+            },
+            "pattern-hit": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "筛选条件栏",
+                "数据表格",
+                "分页"
+              ],
+              "missing": []
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        },
+        "audience-strategy": {
+          "totalScore": 75,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 12,
+              "max": 15,
+              "issues": [
+                "交互元素可能缺少 ARIA 标签"
+              ]
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 8,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Card"
+              ],
+              "missing": [
+                "Select",
+                "Radio"
+              ]
+            },
+            "pattern-hit": {
+              "score": 8,
+              "max": 15,
+              "matched": [
+                "指标卡"
+              ],
+              "missing": [
+                "筛选条件栏"
+              ]
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        },
+        "audience-targeting": {
+          "totalScore": 83,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 12,
+              "max": 15,
+              "issues": [
+                "交互元素可能缺少 ARIA 标签"
+              ]
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Select",
+                "Checkbox",
+                "Radio",
+                "Card",
+                "Button"
+              ],
+              "missing": []
+            },
+            "pattern-hit": {
+              "score": 15,
+              "max": 15,
+              "matched": [
+                "配置面板",
+                "实时预估"
+              ],
+              "missing": []
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        },
+        "conversion-review": {
+          "totalScore": 79,
+          "audit": {
+            "odn-compliance": {
+              "score": 25,
+              "max": 25,
+              "issues": []
+            },
+            "a11y": {
+              "score": 12,
+              "max": 15,
+              "issues": [
+                "交互元素可能缺少 ARIA 标签"
+              ]
+            },
+            "performance": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            },
+            "responsive": {
+              "score": 7,
+              "max": 10,
+              "issues": [
+                "未发现响应式断点处理"
+              ]
+            },
+            "theme-consistency": {
+              "score": 15,
+              "max": 15,
+              "issues": []
+            },
+            "code-quality": {
+              "score": 10,
+              "max": 10,
+              "issues": []
+            }
+          },
+          "business": {
+            "first-pass-usable": {
+              "score": 10,
+              "max": 15,
+              "roundsNeeded": 1
+            },
+            "component-coverage": {
+              "score": 13,
+              "max": 15,
+              "matched": [
+                "RuyiLayout",
+                "Table",
+                "Tabs",
+                "Input",
+                "Pagination"
+              ],
+              "missing": [
+                "Card"
+              ]
+            },
+            "pattern-hit": {
+              "score": 10,
+              "max": 15,
+              "matched": [
+                "Tab 切换",
+                "搜索过滤"
+              ],
+              "missing": [
+                "主从布局"
+              ]
+            },
+            "structure-validity": {
+              "score": 10,
+              "max": 10
+            },
+            "repeatability": {
+              "score": 10,
+              "max": 15,
+              "stdDev": 5
+            },
+            "knowledge-transfer": {
+              "score": 9,
+              "max": 15
+            },
+            "marginal-efficiency": {
+              "score": 8,
+              "max": 15
+            }
+          }
+        }
+      },
+      "comparison": {
+        "previousRunId": "baseline",
+        "totalDelta": "+4.0",
+        "improved": [
+          "account-settings",
+          "asset-flow",
+          "audience-targeting"
+        ],
+        "regressed": [
+          "audience-strategy"
+        ],
+        "unchanged": [
+          "audience-list",
+          "conversion-review"
+        ]
+      }
+    },
+    {
+      "runId": "2026-04-13_v2",
+      "timestamp": "2026-04-13T06:00:21.666Z",
+      "configVersion": "2.0",
+      "strategyPack": {
+        "gitHash": "c8bc357",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": "sha256:436dbf66b730",
+        "configVersion": "2.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "3/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 71.5,
+            "verdicts": {
+              "improved": 1,
+              "unchanged": 0,
+              "regressed": 1,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 2
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 81,
+            "verdicts": {
+              "improved": 1,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 1
+            }
+          }
+        }
+      },
+      "cases": {
+        "account-settings": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 24,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "Tab 切换",
+                  "数据表格",
+                  "搜索过滤",
+                  "CRUD 操作"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 74,
+            "max": 100,
+            "breakdown": {
+              "component-depth": {
+                "score": 13,
+                "max": 20,
+                "details": {
+                  "RuyiLayout": {
+                    "usageCount": 1,
+                    "avgProps": 6
+                  },
+                  "Table": {
+                    "usageCount": 0,
+                    "avgProps": 0
+                  },
+                  "Tabs": {
+                    "usageCount": 0,
+                    "avgProps": 0
+                  },
+                  "Pagination": {
+                    "usageCount": 1,
+                    "avgProps": 4
+                  },
+                  "Input": {
+                    "usageCount": 1,
+                    "avgProps": 2
+                  },
+                  "Button": {
+                    "usageCount": 3,
+                    "avgProps": 2.3
+                  }
+                }
+              },
+              "business-fit": {
+                "score": 15,
+                "max": 25,
+                "patternRatio": 100
+              },
+              "visual-hierarchy": {
+                "score": 11,
+                "max": 15
+              },
+              "editability": {
+                "score": 13,
+                "max": 15
+              },
+              "first-pass-usable": {
+                "score": 15,
+                "max": 15
+              },
+              "stability": {
+                "score": 7,
+                "max": 10,
+                "note": "需多次运行取方差，当前为估算值"
+              }
+            }
+          },
+          "verdict": "improved"
+        },
+        "audience-list": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 20,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "筛选条件栏",
+                  "数据表格",
+                  "分页"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 69,
+            "max": 100,
+            "breakdown": {
+              "component-depth": {
+                "score": 13,
+                "max": 20,
+                "details": {
+                  "RuyiLayout": {
+                    "usageCount": 1,
+                    "avgProps": 9
+                  },
+                  "Table": {
+                    "usageCount": 0,
+                    "avgProps": 0
+                  },
+                  "Input": {
+                    "usageCount": 1,
+                    "avgProps": 3
+                  },
+                  "Select": {
+                    "usageCount": 0,
+                    "avgProps": 0
+                  },
+                  "Pagination": {
+                    "usageCount": 1,
+                    "avgProps": 4
+                  },
+                  "Button": {
+                    "usageCount": 6,
+                    "avgProps": 1.8
+                  }
+                }
+              },
+              "business-fit": {
+                "score": 15,
+                "max": 25,
+                "patternRatio": 100
+              },
+              "visual-hierarchy": {
+                "score": 9,
+                "max": 15
+              },
+              "editability": {
+                "score": 12,
+                "max": 15
+              },
+              "first-pass-usable": {
+                "score": 13,
+                "max": 15
+              },
+              "stability": {
+                "score": 7,
+                "max": 10,
+                "note": "需多次运行取方差，当前为估算值"
+              }
+            }
+          },
+          "verdict": "regressed"
+        },
+        "asset-flow": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": false,
+                "score": 8,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "指标卡",
+                  "桑基图",
+                  "日期对比"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "conversion-review": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 20,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": false,
+                "matched": [
+                  "Tab 切换",
+                  "搜索过滤"
+                ],
+                "missing": [
+                  "主从布局"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "audience-strategy": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": false,
+                "score": 8,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": false,
+                "matched": [
+                  "指标卡"
+                ],
+                "missing": [
+                  "筛选条件栏"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "audience-targeting": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 24,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "配置面板",
+                  "实时预估"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 81,
+            "max": 100,
+            "breakdown": {
+              "component-depth": {
+                "score": 19,
+                "max": 20,
+                "details": {
+                  "RuyiLayout": {
+                    "usageCount": 1,
+                    "avgProps": 9
+                  },
+                  "Select": {
+                    "usageCount": 2,
+                    "avgProps": 3.5
+                  },
+                  "Checkbox": {
+                    "usageCount": 1,
+                    "avgProps": 3
+                  },
+                  "Radio": {
+                    "usageCount": 2,
+                    "avgProps": 2
+                  },
+                  "Card": {
+                    "usageCount": 9,
+                    "avgProps": 2
+                  },
+                  "Button": {
+                    "usageCount": 5,
+                    "avgProps": 1.6
+                  }
+                }
+              },
+              "business-fit": {
+                "score": 15,
+                "max": 25,
+                "patternRatio": 100
+              },
+              "visual-hierarchy": {
+                "score": 13,
+                "max": 15
+              },
+              "editability": {
+                "score": 12,
+                "max": 15
+              },
+              "first-pass-usable": {
+                "score": 15,
+                "max": 15
+              },
+              "stability": {
+                "score": 7,
+                "max": 10,
+                "note": "需多次运行取方差，当前为估算值"
+              }
+            }
+          },
+          "verdict": "improved"
+        }
+      },
+      "comparison": {
+        "previousRunId": "baseline",
+        "improved": [
+          "account-settings",
+          "audience-targeting"
+        ],
+        "regressed": [
+          "audience-list"
+        ],
+        "unchanged": []
+      }
+    },
+    {
+      "runId": "2026-04-13_v3",
+      "timestamp": "2026-04-13T06:14:57.978Z",
+      "configVersion": "3.0",
+      "strategyPack": {
+        "gitHash": "c8bc357",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": "sha256:436dbf66b730",
+        "configVersion": "3.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "3/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 68,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 1,
+              "regressed": 1,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 2
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 76,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 1,
+              "FAIL": 1
+            }
+          }
+        }
+      },
+      "cases": {
+        "account-settings": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 24,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "Tab 切换",
+                  "数据表格",
+                  "搜索过滤",
+                  "CRUD 操作"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 68,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 7,
+                "max": 20,
+                "roleDetails": {
+                  "导航区": {
+                    "expected": [
+                      "Tabs"
+                    ],
+                    "found": [],
+                    "hit": false
+                  },
+                  "筛选区": {
+                    "expected": [
+                      "Input"
+                    ],
+                    "found": [
+                      "Input"
+                    ],
+                    "hit": true
+                  },
+                  "数据区": {
+                    "expected": [
+                      "Table"
+                    ],
+                    "found": [],
+                    "hit": false
+                  },
+                  "操作区": {
+                    "expected": [
+                      "Button"
+                    ],
+                    "found": [
+                      "Button"
+                    ],
+                    "hit": true
+                  },
+                  "分页区": {
+                    "expected": [
+                      "Pagination"
+                    ],
+                    "found": [
+                      "Pagination"
+                    ],
+                    "hit": true
+                  }
+                },
+                "variantDetails": {
+                  "Button:primary": false,
+                  "Button:default": false,
+                  "Button:text": false
+                }
+              },
+              "business-understanding": {
+                "score": 22,
+                "max": 25,
+                "checklist": [
+                  {
+                    "item": "角色列表和成员列表Tab切换",
+                    "hit": true,
+                    "weight": 3
+                  },
+                  {
+                    "item": "角色包含描述字段",
+                    "hit": true,
+                    "weight": 1
+                  },
+                  {
+                    "item": "角色包含关联成员信息",
+                    "hit": false,
+                    "weight": 1
+                  },
+                  {
+                    "item": "支持新建角色",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "支持编辑和删除",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "支持搜索",
+                    "hit": true,
+                    "weight": 2
+                  }
+                ],
+                "hitRate": 91
+              },
+              "design-language": {
+                "score": 16,
+                "max": 20,
+                "tokenUsage": 1,
+                "hardcodedColors": 0,
+                "uniqueFontSizes": 0,
+                "nonAlignedSpacing": 0
+              },
+              "state-coverage": {
+                "score": 0,
+                "max": 10,
+                "states": {
+                  "loading": {
+                    "hit": false,
+                    "required": true
+                  },
+                  "empty": {
+                    "hit": false,
+                    "required": true
+                  },
+                  "error": {
+                    "hit": false,
+                    "required": false
+                  }
+                }
+              },
+              "implementability": {
+                "score": 13,
+                "max": 15,
+                "lines": 263,
+                "funcCount": 1
+              },
+              "robustness": {
+                "score": 10,
+                "max": 10,
+                "totalFailures": 0,
+                "recentFailures": 0
+              }
+            }
+          },
+          "verdict": "regressed"
+        },
+        "audience-list": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 20,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "筛选条件栏",
+                  "数据表格",
+                  "分页"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 68,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 8,
+                "max": 20,
+                "roleDetails": {
+                  "筛选区": {
+                    "expected": [
+                      "Select",
+                      "Input"
+                    ],
+                    "found": [
+                      "Input"
+                    ],
+                    "hit": false
+                  },
+                  "数据区": {
+                    "expected": [
+                      "Table"
+                    ],
+                    "found": [],
+                    "hit": false
+                  },
+                  "操作区": {
+                    "expected": [
+                      "Button"
+                    ],
+                    "found": [
+                      "Button"
+                    ],
+                    "hit": true
+                  },
+                  "分页区": {
+                    "expected": [
+                      "Pagination"
+                    ],
+                    "found": [
+                      "Pagination"
+                    ],
+                    "hit": true
+                  }
+                },
+                "variantDetails": {
+                  "Button:primary": false,
+                  "Button:default": false
+                }
+              },
+              "business-understanding": {
+                "score": 24,
+                "max": 25,
+                "checklist": [
+                  {
+                    "item": "表格包含人群名称列",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "表格包含状态列",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "表格包含规模列",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "表格包含创建时间列",
+                    "hit": true,
+                    "weight": 1
+                  },
+                  {
+                    "item": "支持搜索功能",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "支持状态筛选",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "操作列含编辑/删除",
+                    "hit": true,
+                    "weight": 1
+                  }
+                ],
+                "hitRate": 100
+              },
+              "design-language": {
+                "score": 13,
+                "max": 20,
+                "tokenUsage": 4,
+                "hardcodedColors": 2,
+                "uniqueFontSizes": 0,
+                "nonAlignedSpacing": 0
+              },
+              "state-coverage": {
+                "score": 3,
+                "max": 10,
+                "states": {
+                  "loading": {
+                    "hit": false,
+                    "required": true
+                  },
+                  "empty": {
+                    "hit": false,
+                    "required": true
+                  },
+                  "error": {
+                    "hit": true,
+                    "required": false
+                  }
+                }
+              },
+              "implementability": {
+                "score": 12,
+                "max": 15,
+                "lines": 357,
+                "funcCount": 1
+              },
+              "robustness": {
+                "score": 8,
+                "max": 10,
+                "totalFailures": 1,
+                "recentFailures": 1
+              }
+            }
+          },
+          "verdict": "unchanged"
+        },
+        "asset-flow": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": false,
+                "score": 8,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "指标卡",
+                  "桑基图",
+                  "日期对比"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "conversion-review": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 20,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": false,
+                "matched": [
+                  "Tab 切换",
+                  "搜索过滤"
+                ],
+                "missing": [
+                  "主从布局"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "audience-strategy": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": false,
+                "score": 8,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": false,
+                "matched": [
+                  "指标卡"
+                ],
+                "missing": [
+                  "筛选条件栏"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "audience-targeting": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 24,
+                "min": 20,
+                "issues": []
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "配置面板",
+                  "实时预估"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 76,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 12,
+                "max": 20,
+                "roleDetails": {
+                  "配置区": {
+                    "expected": [
+                      "Select",
+                      "Checkbox",
+                      "Radio"
+                    ],
+                    "found": [
+                      "Select",
+                      "Checkbox",
+                      "Radio"
+                    ],
+                    "hit": true
+                  },
+                  "预估展示区": {
+                    "expected": [
+                      "Card"
+                    ],
+                    "found": [
+                      "Card"
+                    ],
+                    "hit": true
+                  },
+                  "操作区": {
+                    "expected": [
+                      "Button"
+                    ],
+                    "found": [
+                      "Button"
+                    ],
+                    "hit": true
+                  }
+                },
+                "variantDetails": {
+                  "Button:primary": false,
+                  "Button:default": false
+                }
+              },
+              "business-understanding": {
+                "score": 24,
+                "max": 25,
+                "checklist": [
+                  {
+                    "item": "定向维度配置",
+                    "hit": true,
+                    "weight": 3
+                  },
+                  {
+                    "item": "人群包选择",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "年龄筛选控件",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "性别筛选控件",
+                    "hit": true,
+                    "weight": 2
+                  },
+                  {
+                    "item": "实时覆盖人数",
+                    "hit": true,
+                    "weight": 3
+                  },
+                  {
+                    "item": "表单提交操作",
+                    "hit": true,
+                    "weight": 1
+                  }
+                ],
+                "hitRate": 100
+              },
+              "design-language": {
+                "score": 16,
+                "max": 20,
+                "tokenUsage": 6,
+                "hardcodedColors": 0,
+                "uniqueFontSizes": 0,
+                "nonAlignedSpacing": 0
+              },
+              "state-coverage": {
+                "score": 2,
+                "max": 10,
+                "states": {
+                  "loading": {
+                    "hit": false,
+                    "required": true
+                  },
+                  "empty": {
+                    "hit": true,
+                    "required": false
+                  },
+                  "error": {
+                    "hit": false,
+                    "required": false
+                  },
+                  "computing": {
+                    "hit": true,
+                    "required": false
+                  }
+                }
+              },
+              "implementability": {
+                "score": 12,
+                "max": 15,
+                "lines": 894,
+                "funcCount": 8
+              },
+              "robustness": {
+                "score": 10,
+                "max": 10,
+                "totalFailures": 0,
+                "recentFailures": 0
+              }
+            }
+          },
+          "verdict": "regressed"
+        }
+      },
+      "comparison": {
+        "previousRunId": "2026-04-13_v2",
+        "improved": [],
+        "regressed": [
+          "account-settings",
+          "audience-targeting"
+        ],
+        "unchanged": [
+          "audience-list"
+        ]
+      }
+    },
+    {
+      "runId": "baseline",
+      "timestamp": "2026-04-13T00:00:00Z",
+      "configVersion": "3.0",
+      "strategyPack": {
+        "gitHash": "initial",
+        "model": "unknown",
+        "skillFiles": {},
+        "auditRules": null,
+        "configVersion": "3.0"
+      },
+      "summary": {
+        "totalCases": 6,
+        "hardGatePassRate": "5/6",
+        "datasetSummary": {
+          "gold": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 68.5,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 2,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "regression": {
+            "total": 0,
+            "hardGatePass": 0,
+            "avgSoftScore": 0,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 0,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          },
+          "failure": {
+            "total": 2,
+            "hardGatePass": 1,
+            "avgSoftScore": 52,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 1,
+              "regressed": 0,
+              "FAIL": 1
+            }
+          },
+          "exploration": {
+            "total": 2,
+            "hardGatePass": 2,
+            "avgSoftScore": 60,
+            "verdicts": {
+              "improved": 0,
+              "unchanged": 2,
+              "regressed": 0,
+              "FAIL": 0
+            }
+          }
+        }
+      },
+      "cases": {
+        "audience-list": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 23,
+                "min": 20,
+                "issues": [
+                  "个别色值使用了 Tailwind 默认色板"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "筛选条件栏",
+                  "数据表格",
+                  "分页"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 75,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 14,
+                "max": 20
+              },
+              "business-understanding": {
+                "score": 20,
+                "max": 25
+              },
+              "design-language": {
+                "score": 14,
+                "max": 20
+              },
+              "state-coverage": {
+                "score": 6,
+                "max": 10
+              },
+              "implementability": {
+                "score": 12,
+                "max": 15
+              },
+              "robustness": {
+                "score": 9,
+                "max": 10
+              }
+            }
+          },
+          "verdict": "unchanged"
+        },
+        "account-settings": {
+          "dataset": "gold",
+          "riskLevel": "low",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 22,
+                "min": 20,
+                "issues": [
+                  "个别 Icon 使用方式不规范"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "Tab 切换",
+                  "数据表格",
+                  "搜索过滤"
+                ],
+                "missing": [
+                  "CRUD 操作"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 62,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 12,
+                "max": 20
+              },
+              "business-understanding": {
+                "score": 17,
+                "max": 25
+              },
+              "design-language": {
+                "score": 12,
+                "max": 20
+              },
+              "state-coverage": {
+                "score": 4,
+                "max": 10
+              },
+              "implementability": {
+                "score": 10,
+                "max": 15
+              },
+              "robustness": {
+                "score": 7,
+                "max": 10
+              }
+            }
+          },
+          "verdict": "unchanged"
+        },
+        "asset-flow": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": false,
+            "details": {
+              "odn-compliance": {
+                "passed": false,
+                "score": 19,
+                "min": 20,
+                "issues": [
+                  "桑基图使用了外部样式",
+                  "指标卡色值部分硬编码"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": false,
+                "matched": [
+                  "指标卡"
+                ],
+                "missing": [
+                  "桑基图",
+                  "日期对比"
+                ]
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": null,
+          "verdict": "FAIL"
+        },
+        "conversion-review": {
+          "dataset": "failure",
+          "riskLevel": "high",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 21,
+                "min": 20,
+                "issues": [
+                  "表单项缺少 Form.Item 包裹"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "主从布局",
+                  "Tab 切换",
+                  "搜索过滤"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 52,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 10,
+                "max": 20
+              },
+              "business-understanding": {
+                "score": 14,
+                "max": 25
+              },
+              "design-language": {
+                "score": 10,
+                "max": 20
+              },
+              "state-coverage": {
+                "score": 3,
+                "max": 10
+              },
+              "implementability": {
+                "score": 9,
+                "max": 15
+              },
+              "robustness": {
+                "score": 6,
+                "max": 10
+              }
+            }
+          },
+          "verdict": "unchanged"
+        },
+        "audience-strategy": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 22,
+                "min": 20,
+                "issues": [
+                  "部分 Icon 未使用内置 Icon 组件"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "筛选条件栏",
+                  "指标卡"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 63,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 12,
+                "max": 20
+              },
+              "business-understanding": {
+                "score": 18,
+                "max": 25
+              },
+              "design-language": {
+                "score": 12,
+                "max": 20
+              },
+              "state-coverage": {
+                "score": 4,
+                "max": 10
+              },
+              "implementability": {
+                "score": 10,
+                "max": 15
+              },
+              "robustness": {
+                "score": 7,
+                "max": 10
+              }
+            }
+          },
+          "verdict": "unchanged"
+        },
+        "audience-targeting": {
+          "dataset": "exploration",
+          "riskLevel": "medium",
+          "hardGate": {
+            "passed": true,
+            "details": {
+              "odn-compliance": {
+                "passed": true,
+                "score": 20,
+                "min": 20,
+                "issues": [
+                  "配置面板内有硬编码间距",
+                  "部分组件未使用 Form.Item 包裹"
+                ]
+              },
+              "forbidden-violations": {
+                "passed": true,
+                "violations": []
+              },
+              "core-patterns-required": {
+                "passed": true,
+                "matched": [
+                  "配置面板",
+                  "实时预估"
+                ],
+                "missing": []
+              },
+              "parseable": {
+                "passed": true,
+                "details": {
+                  "hasExport": true,
+                  "hasJsx": true,
+                  "balanced": true
+                }
+              }
+            }
+          },
+          "softScore": {
+            "total": 57,
+            "max": 100,
+            "breakdown": {
+              "component-identity": {
+                "score": 10,
+                "max": 20
+              },
+              "business-understanding": {
+                "score": 15,
+                "max": 25
+              },
+              "design-language": {
+                "score": 11,
+                "max": 20
+              },
+              "state-coverage": {
+                "score": 5,
+                "max": 10
+              },
+              "implementability": {
+                "score": 9,
+                "max": 15
+              },
+              "robustness": {
+                "score": 7,
+                "max": 10
+              }
+            }
+          },
+          "verdict": "unchanged"
+        }
+      }
+    }
+  ]
+}

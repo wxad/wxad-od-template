@@ -10,8 +10,8 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useEffect, useMemo, useState } from 'react';
-import { ReviewMasterDetailLayout } from '../../../../skills/p2-block-catalog/references/review-master-detail-layout';
-import { ConversionTrend as ConversionTrendBlock } from '../../../../skills/p2-block-catalog/references/conversion-trend';
+import { ReviewMasterDetailLayout } from '../blocks/review-master-detail-layout';
+import { ConversionTrend as ConversionTrendBlock } from '../blocks/conversion-trend';
 import conversionReviewFixture from './data/conversion-review.json';
 
 // ─── 菜单 ─────

@@ -16,7 +16,7 @@ import React, { useMemo, useState } from 'react';
 import {
   AISearchBar,
   AISearchResultPanel,
-} from '../../../../skills/p2-block-catalog/references/ai-brief-input';
+} from '../blocks/ai-brief-input';
 import createAudienceFixture from './data/create-audience.json';
 
 // 本地 fixtures，避免预览域等非 localhost 来源被 CDN CORS 拦截

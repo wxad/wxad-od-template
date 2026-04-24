@@ -1,0 +1,340 @@
+// MessageItem 组件样式
+.message-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  gap: 12px;
+  height: 48px;
+  min-width: 0;
+  transition: 150ms ease background-color;
+
+  &:hover {
+    background-color: var(--odn-color-black-1);
+  }
+
+  &.message-item-clickable {
+    .message-text {
+      cursor: pointer;
+
+      &:hover {
+        color: var(--odn-color-primary);
+
+        .message-text-inner,
+        .message-text-inner-button-hover {
+          opacity: 0;
+        }
+
+        .message-text-inner-hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:not(.message-item-clickable-with-button) {
+      cursor: pointer;
+
+      &:hover {
+        .message-text {
+          color: var(--odn-color-primary);
+        }
+
+        .message-text-inner,
+        .message-text-inner-button-hover {
+          opacity: 0;
+        }
+
+        .message-text-inner-hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// 类型标签样式
+.type-badge {
+  flex: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 22px;
+  font-size: 12px;
+  border-radius: 11px;
+
+  &.type-badge-read {
+    color: var(--odn-color-black-12);
+  }
+
+  &.type-badge-unread {
+    color: var(--odn-primary-color);
+  }
+}
+
+// 类型标签背景
+.type-badge-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
+
+  &.type-badge-bg-read {
+    background-color: var(--odn-color-black-2);
+  }
+
+  &.type-badge-bg-unread {
+    background-color: var(--odn-primary-color);
+    opacity: 0.06;
+  }
+}
+
+.message-text-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  // 为了 message-button:hover 能够选择到 message-text 的 css 选择器
+  flex-direction: row-reverse;
+  flex: 1;
+}
+
+// 消息文本样式
+.message-text {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+.message-text-inner,
+.message-text-inner-hover,
+.message-text-inner-button-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 150ms ease all;
+}
+
+.message-text-inner-hover,
+.message-text-inner-button-hover {
+  opacity: 0;
+}
+
+.message-text-inner-button-hover {
+  width: calc(100% - 22px);
+}
+
+.message-text-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.message-text-icon {
+  flex: none;
+  fill: var(--odn-color-primary);
+}
+
+// 按钮文本样式
+.message-button {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  color: var(--odn-primary-color);
+  cursor: pointer;
+  transition: 150ms ease all;
+
+  &:hover {
+    .message-button-text {
+      transform: translateX(-22px);
+    }
+    .message-button-icon {
+      opacity: 1;
+      transform: translateX(0) translateY(-50%);
+    }
+
+    + .message-text {
+      .message-text-inner-button-hover {
+        opacity: 1;
+      }
+
+      .message-text-inner,
+      .message-text-inner-hover {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.message-button-text {
+  transition: 150ms ease all;
+}
+
+.message-button-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateX(22px) translateY(-50%);
+  right: 0;
+  fill: var(--odn-color-blue-7);
+  opacity: 0;
+  transition: 150ms ease all;
+  pointer-events: none;
+}
+
+// 发布时间样式
+.message-time {
+  flex: none;
+  font-size: 12px;
+  color: var(--odn-color-black-9);
+}
+
+// 标签页头部样式
+.tabs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 8px;
+  height: 52px;
+  border-bottom: 1px solid var(--odn-color-black-3);
+}
+
+// 标签页导航样式
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+// 标签页项样式
+.tab-item {
+  height: 100%;
+  color: var(--odn-color-black-9);
+  cursor: pointer;
+  transition: color 150ms;
+
+  &:hover {
+    color: var(--odn-color-black-10);
+  }
+
+  &.tab-item-active {
+    color: var(--odn-color-black-12);
+
+    &:hover {
+      color: var(--odn-color-black-12);
+    }
+  }
+}
+
+// 标签页内容容器
+.tab-content {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+// 标签页面板样式
+.tab-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 200ms;
+
+  &.tab-panel-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &.tab-panel-inactive-left {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-32px);
+  }
+
+  &.tab-panel-inactive-right {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(32px);
+  }
+}
+
+// 滚动区域样式
+.scroll-area {
+  padding: 8px 0;
+  height: 256px;
+}
+
+// 底部按钮区域样式
+.tab-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  height: 44px;
+  border-top: 1px solid var(--odn-color-black-3);
+}
+
+// 触发器图标容器
+.trigger-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+}
+
+// 触发器图标背景
+.trigger-icon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--odn-color-primary);
+  opacity: 0;
+  border-radius: 6px;
+  transition: opacity 150ms;
+
+  &.trigger-icon-bg-active {
+    opacity: 0.08;
+  }
+}
+
+// 徽章指示器样式
+.badge-indicator {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: var(--odn-primary-color);
+  border-radius: 50%;
+}
+
+// 徽章数字样式
+.badge-number {
+  font-size: 12px;
+  transform: scale(0.83);
+  color: white;
+}

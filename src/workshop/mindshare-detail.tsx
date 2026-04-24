@@ -11,8 +11,8 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useState } from 'react';
-import MetricsOverview from '../../../../skills/p2-block-catalog/references/metrics-overview';
-import MindShareDictionary from '../../../../skills/p2-block-catalog/references/mindshare-dictionary';
+import MetricsOverview from '../blocks/metrics-overview';
+import MindShareDictionary from '../blocks/mindshare-dictionary';
 
 const BRAND_AVATAR =
   'https://wxa.wxs.qq.com/wxad-design/yijie/radar/1776411999700-330b1c2ca96a3403.jpg';

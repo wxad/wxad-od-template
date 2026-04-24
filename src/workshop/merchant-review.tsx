@@ -10,7 +10,7 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useState } from 'react';
-import { ReviewMasterDetailLayout } from '../../../../skills/p2-block-catalog/references/review-master-detail-layout';
+import { ReviewMasterDetailLayout } from '../blocks/review-master-detail-layout';
 
 // ─── 菜单 ─────
 const MENU_ITEMS: RuyiMenuItem[] = [

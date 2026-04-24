@@ -14,7 +14,7 @@ import {
 // @ts-ignore
 import EChartsReact from 'echarts-for-react';
 import React, { useMemo, useState } from 'react';
-import PenetrationAnalysisBlock from '../../../../skills/p2-block-catalog/references/penetration-analysis';
+import PenetrationAnalysisBlock from '../blocks/penetration-analysis';
 
 type MetricItem = {
   label: string;

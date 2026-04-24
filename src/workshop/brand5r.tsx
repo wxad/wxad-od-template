@@ -13,7 +13,7 @@ import {
 // @ts-ignore
 import EChartsReact from 'echarts-for-react';
 import React, { useEffect, useMemo, useState } from 'react';
-import { CrowdAssetOverviewCard } from '../../../../skills/p2-block-catalog/references/metric-card-group';
+import { CrowdAssetOverviewCard } from '../blocks/metric-card-group';
 import triggerBench from './data/trigger-bench.json';
 import triggerSelf from './data/trigger-self.json';
 import r0Bench from './data/r0-bench.json';

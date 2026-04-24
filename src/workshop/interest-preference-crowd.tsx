@@ -11,11 +11,11 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useMemo, useState } from 'react';
-import { NotificationPopoverTrigger } from '../../../../components/popover/demo/notification-popover-trigger';
+import { NotificationPopoverTrigger } from '../blocks/_internal/notification-popover-trigger';
 import {
   CrowdPickCardGrid,
   type CrowdPickCard,
-} from '../../../../skills/p2-block-catalog/references/crowd-pick-card-grid';
+} from '../blocks/crowd-pick-card-grid';
 
 const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量'];
 
