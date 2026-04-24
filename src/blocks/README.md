@@ -1,8 +1,8 @@
 # blocks（区块参考实现）
 
-由 **one-design-next** 仓库 `skills/p2-block-catalog/references/` 同步，供 `src/workshop/` 与业务页直接 `import`。
+**唯一源码目录**：与 one-design-next 文档站、本模板 `npm run dev` 共用；父仓库 `skills/p2-block-catalog/references/` 已弃用（仅存 README 指针）。
 
-- `dual-ranking-list`：文档站依赖的 `dumi/CodeBox` 已替换为本地 `DemoBox`。
-- `notification-popover`：依赖的 demo 触发器在 `_internal/notification-popover-trigger.tsx`（含 `controlled.scss`）。
+- `dual-ranking-list`：`dumi/CodeBox` 已替换为本地 `DemoBox`。
+- `notification-popover`：demo 触发器在 `_internal/notification-popover-trigger.tsx`（含 `controlled.scss`）。
 
-与上游 skill 双写时，以 **本目录为可运行源码**；skill 侧保留规则与说明即可。
+Skill 侧仅保留 `skills/p2-block-catalog/rules/*.md` 与 `GUIDE.md`（规格与索引），**不再维护第二份 TSX**。
