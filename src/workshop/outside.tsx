@@ -2,7 +2,6 @@
 
 import {
   Button,
-  DateRangePicker,
   Icon,
   RuyiLayout,
   Select,
@@ -14,6 +13,7 @@ import * as echarts from 'echarts';
 import EChartsReact from 'echarts-for-react';
 import React, { useEffect, useMemo, useState } from 'react';
 import WordCloud from 'react-d3-cloud';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 import outsideFixture from './data/outside.json';
 
 // 本地 fixtures，避免预览域等非 localhost 来源被 CDN CORS 拦截
@@ -636,6 +636,10 @@ export default function OutsidePage() {
   const [activeNav, setActiveNav] = useState('洞察诊断');
   const [activeMenu, setActiveMenu] = useState('outer-spread');
   const [metricForTrend, setMetricForTrend] = useState('volume');
+  const [outsideDateRange, setOutsideDateRange] = useState<[Date, Date]>([
+    new Date('2026-04-13'),
+    new Date('2026-04-19'),
+  ]);
   const [wordCloudMetric, setWordCloudMetric] = useState('positive');
 
   const summary = cdnData?.summary;
@@ -664,10 +668,10 @@ export default function OutsidePage() {
     >
       {/* ═══ 1. 筛选栏（对齐 dmp-web ListPage filter） ═══ */}
       <div className="bg-white rounded-xl px-6 py-4 flex items-center">
-        <DateRangePicker
-          className="w-[280px]"
-          value={[new Date('2026-04-13'), new Date('2026-04-19')]}
-          allowClear={false}
+        <RyDateRangePicker
+          value={outsideDateRange}
+          onChange={setOutsideDateRange}
+          triggerWidth="280px"
         />
         <div className="ml-auto flex items-center gap-2">
           <Tooltip popup="所有域外数据为品牌在全网主流平台（除腾讯平台外）相关指标的分析结果，可用来衡量腾讯广告对品牌腾讯域外平台的广告效果影响，数据为预估指数，并非域外真实数值。">
@@ -772,16 +776,12 @@ export default function OutsidePage() {
             <span className="text-base font-semibold text-[#0d0d0d]">
               趋势相关性分析
             </span>
-            <div className="flex items-center gap-1 text-sm text-[#0d0d0d]">
-              <span>指标设置</span>
-              <Select
-                light
-                value={metricForTrend}
-                onChange={(v) => setMetricForTrend(v as string)}
-                options={metricOptions}
-                className="w-[120px]"
-              />
-            </div>
+            <Select
+              prefix="指标设置"
+              value={metricForTrend}
+              onChange={(v) => setMetricForTrend(v as string)}
+              options={metricOptions}
+            />
           </div>
           {/* 图例 */}
           <div className="flex items-center gap-4 mb-2">
@@ -834,23 +834,19 @@ export default function OutsidePage() {
                     词云图
                   </span>
                   <div className="flex items-center gap-2.5">
-                    <div className="flex items-center gap-1 text-sm text-[#0d0d0d]">
-                      <span>词云设置</span>
-                      <Tooltip popup="词云所展示的是在正向/负向内容中的高频词汇。情感判断基于内容整体，而非单个词语，同一词语可能因语境差异同时出现在不同情感词云中。">
-                        <Icon
-                          name="help-circle"
-                          size={14}
-                          className="text-[#898b8f] cursor-help"
-                        />
-                      </Tooltip>
-                      <Select
-                        light
-                        value={wordCloudMetric}
-                        onChange={(v) => setWordCloudMetric(v as string)}
-                        options={wordCloudOptions}
-                        className="w-[120px]"
+                    <Tooltip popup="词云所展示的是在正向/负向内容中的高频词汇。情感判断基于内容整体，而非单个词语，同一词语可能因语境差异同时出现在不同情感词云中。">
+                      <Icon
+                        name="help-circle"
+                        size={14}
+                        className="text-[#898b8f] cursor-help"
                       />
-                    </div>
+                    </Tooltip>
+                    <Select
+                      prefix="词云设置"
+                      value={wordCloudMetric}
+                      onChange={(v) => setWordCloudMetric(v as string)}
+                      options={wordCloudOptions}
+                    />
                   </div>
                 </div>
                 {word && (

@@ -3,7 +3,6 @@
 import {
   Button,
   Card,
-  DateRangePicker,
   HoverFill,
   Icon,
   RuyiLayout,
@@ -12,7 +11,7 @@ import {
   type RuyiMenuItem,
 } from 'one-design-next';
 import React, { useState } from 'react';
-
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 const BRAND_AVATAR =
   'https://wxa.wxs.qq.com/wxad-design/yijie/radar/1776411999700-330b1c2ca96a3403.jpg';
 
@@ -318,8 +317,7 @@ function RankingMindshareSelect() {
   const [value, setValue] = useState('all');
   return (
     <Select
-      light
-      size="small"
+      prefix="范围"
       value={value}
       options={MINDSHARE_SCOPE_OPTIONS}
       onChange={(v) => setValue(String(v ?? 'all'))}
@@ -481,6 +479,10 @@ function SurgeRanking() {
 const IndustryMindshare = () => {
   const [activeNav, setActiveNav] = useState('洞察诊断');
   const [activeMenu, setActiveMenu] = useState('industry-opportunity-mind');
+  const [industryDateRange, setIndustryDateRange] = useState<[Date, Date]>([
+    new Date('2025-09-17'),
+    new Date('2025-10-17'),
+  ]);
 
   return (
     <RuyiLayout
@@ -529,11 +531,10 @@ const IndustryMindshare = () => {
           </div>
         </div>
         <div className="flex items-center gap-3 border-t border-black-4 px-6 py-3">
-          <DateRangePicker
-            value={[new Date('2025-09-17'), new Date('2025-10-17')]}
-            lang="zhCN"
-            prefix="日期范围"
-            className="w-[276px]"
+          <RyDateRangePicker
+            value={industryDateRange}
+            onChange={setIndustryDateRange}
+            triggerWidth="276px"
           />
         </div>
       </div>

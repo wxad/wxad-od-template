@@ -478,6 +478,7 @@ function StoreAnalysis({
       >
         <div className="flex mr-3 w-[426px]">
           <Select
+            prefix="门店类型"
             value={storeMode}
             onChange={(v) => setStoreMode(v as string)}
             options={[
@@ -652,6 +653,7 @@ function OnePartyAnalysis({
 
         <div className="mr-3 w-[280px]">
           <Cascader
+            prefix="区域"
             options={provinceCityArea}
             value={area}
             onChange={(v) => setArea(v as string[])}

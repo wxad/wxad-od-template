@@ -734,7 +734,7 @@ function RippleChart() {
       <div className="flex items-center justify-between px-3 py-3">
         <div className="flex items-center gap-1">
           <Select
-            className="w-[160px]"
+            prefix="人群类目"
             allowClear={false}
             value={category}
             onChange={setCategory}

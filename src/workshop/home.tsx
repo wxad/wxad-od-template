@@ -4,7 +4,6 @@ import {
   Button,
   Cascader,
   DatePicker,
-  DateRangePicker,
   Icon,
   RuyiLayout,
   Select,
@@ -13,6 +12,7 @@ import {
 } from 'one-design-next';
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 // @ts-ignore
 import * as echarts from 'echarts';
 import EChartsReact from 'echarts-for-react';
@@ -286,6 +286,7 @@ function TrendChart({
     <div className="flex-1 min-w-0">
       <div className="py-3">
         <Cascader
+          prefix="指标"
           allowClear={false}
           showInnerSearch
           options={cascaderOptions}
@@ -749,7 +750,7 @@ function RadarBox({
       <div className="w-full">
         <div className="px-5 py-3">
           <Select
-            light
+            prefix="排名"
             value={rankKey}
             onChange={(val) => setRankKey(val as string)}
             options={selectData.map((opt: any) => ({
@@ -976,10 +977,9 @@ export default function Home() {
         <SectionHeader
           title="核心指标概览"
           right={
-            <DateRangePicker
+            <RyDateRangePicker
               value={coreIndexRange}
               onChange={setCoreIndexRange}
-              lang="zhCN"
             />
           }
         />
@@ -1034,6 +1034,8 @@ export default function Home() {
               <DatePicker
                 value={overviewDate}
                 onChange={(date) => setOverviewDate(date)}
+                prefix="日期"
+                className="w-[200px]"
               />
               <span className="h-4 w-px bg-black-4 mx-1" />
               <Button light icon="setting">指标设置</Button>
@@ -1089,9 +1091,9 @@ export default function Home() {
           title="品牌资产趋势分析"
           right={
             <div className="flex items-center gap-2">
-              <DateRangePicker
+              <RyDateRangePicker
                 value={trendDateRange}
-                onChange={(val) => setTrendDateRange(val)}
+                onChange={setTrendDateRange}
               />
               <Button light icon="setting">指标设置</Button>
               <Button light icon="download-1">下载数据</Button>

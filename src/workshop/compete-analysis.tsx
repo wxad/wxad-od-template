@@ -7,7 +7,6 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-  DateRangePicker,
   Icon,
   Input,
   RuyiLayout,
@@ -18,6 +17,7 @@ import {
 import React, { useEffect, useMemo, useState } from 'react';
 // @ts-ignore
 import * as echarts from 'echarts';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 import EChartsReact from 'echarts-for-react';
 import bubbleDataJson from './data/compete-bubble-data.json';
 import rankConfigJson from './data/market-rank-config.json';
@@ -691,11 +691,10 @@ export default function CompeteAnalysis() {
                     className="w-[200px]"
                   />
                   <div className="flex items-center shrink-0">
-                    <DateRangePicker
-                      prefix="日期范围"
+                    <RyDateRangePicker
                       value={dateRange}
                       onChange={setDateRange}
-                      className="w-[290px]"
+                      triggerWidth="290px"
                     />
                   </div>
                 </div>

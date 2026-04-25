@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import {
   Button,
   Card,
-  DateRangePicker,
   Icon,
   RuyiLayout,
   Select,
@@ -13,6 +12,7 @@ import {
 import React, { useState } from 'react';
 import MetricsOverview from '../blocks/metrics-overview';
 import MindShareDictionary from '../blocks/mindshare-dictionary';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 
 const BRAND_AVATAR =
   'https://wxa.wxs.qq.com/wxad-design/yijie/radar/1776411999700-330b1c2ca96a3403.jpg';
@@ -644,6 +644,10 @@ function LineChart({ data }: { data: ChartBar[] }) {
 const MindshareDetail = () => {
   const [activeNav, setActiveNav] = useState('洞察诊断');
   const [activeMenu, setActiveMenu] = useState('mindshare-detail');
+  const [mindDateRange, setMindDateRange] = useState<[Date, Date]>([
+    new Date('2025-09-17'),
+    new Date('2025-10-17'),
+  ]);
 
   return (
     <RuyiLayout
@@ -716,9 +720,9 @@ const MindshareDetail = () => {
               本品牌
             </button>
           </div>
-          <DateRangePicker
-            value={[new Date('2025-09-17'), new Date('2025-10-17')]}
-            lang="zhCN"
+          <RyDateRangePicker
+            value={mindDateRange}
+            onChange={setMindDateRange}
           />
           <Select
             prefix={<span className="text-black-9">参考系</span>}

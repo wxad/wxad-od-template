@@ -1020,6 +1020,7 @@ export default function SearchInsight() {
         <div className="flex flex-col gap-3 pb-4">
           <div className="flex items-center justify-between">
             <Select
+              prefix="报告"
               value={reportDetail.mind_insight_id}
               options={[
                 {
@@ -1027,7 +1028,6 @@ export default function SearchInsight() {
                   value: reportDetail.mind_insight_id,
                 },
               ]}
-              className="w-[200px]"
             />
             <div className="flex items-center gap-2">
               <Button light icon="file-text">
@@ -1157,12 +1157,11 @@ export default function SearchInsight() {
                 排除标签包含词
               </Checkbox>
               <Select
-                light
+                prefix="关键词类型"
                 value={keywordType}
                 onChange={(v) => setKeywordType(v as string)}
                 options={keywordTypeOptions}
                 popupMatchSelectWidth={false}
-                labelRender={(opt) => <span>关键词类型：{opt.label}</span>}
               />
             </div>
           }

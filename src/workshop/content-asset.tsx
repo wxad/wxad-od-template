@@ -2,7 +2,6 @@
 
 import {
   Button,
-  DateRangePicker,
   RuyiLayout,
   Select,
   Tooltip,
@@ -12,6 +11,7 @@ import {
 import EChartsReact from 'echarts-for-react';
 import React, { useEffect, useRef, useState } from 'react';
 import WordCloud from 'react-d3-cloud';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 import contentAssetFixture from './data/content-asset.json';
 
 // 本地 fixtures，避免预览域等非 localhost 来源被 CDN CORS 拦截
@@ -735,6 +735,10 @@ export default function ContentAssetPage() {
   const [activeNav, setActiveNav] = useState('洞察诊断');
   const [activeMenu, setActiveMenu] = useState('inner-spread');
   const [metricForRank, setMetricForRank] = useState('touch_cnt');
+  const [contentDateRange, setContentDateRange] = useState<[Date, Date]>([
+    new Date('2026-03-23'),
+    new Date('2026-04-21'),
+  ]);
   const [metricForTrend, setMetricForTrend] = useState('touch_cnt');
   const [brandSearchKey, setBrandSearchKey] = useState('');
 
@@ -767,11 +771,11 @@ export default function ContentAssetPage() {
     >
       {/* ═══ 1. 筛选栏 ═══ */}
       <div className="bg-white rounded-xl px-6 py-4 flex items-center gap-4">
-        <DateRangePicker
-          className="w-[280px]"
-          value={[new Date('2026-03-23'), new Date('2026-04-21')]}
-          allowClear={false}
-          prefix="日期"
+        <RyDateRangePicker
+          value={contentDateRange}
+          onChange={setContentDateRange}
+          triggerLabel="日期"
+          triggerWidth="280px"
         />
         <Select
           value="compare_other_brand"
@@ -904,15 +908,12 @@ export default function ContentAssetPage() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 text-sm text-[#0d0d0d]">
-              <span>指标设置</span>
-              <Select
-                value={metricForRank}
-                onChange={(v) => setMetricForRank(v as string)}
-                options={metricOptions}
-                className="w-[120px]"
-              />
-            </div>
+            <Select
+              prefix="指标设置"
+              value={metricForRank}
+              onChange={(v) => setMetricForRank(v as string)}
+              options={metricOptions}
+            />
           </div>
         </div>
         <div
@@ -966,15 +967,12 @@ export default function ContentAssetPage() {
           <span className="text-base font-semibold text-[#0d0d0d]">
             趋势分析
           </span>
-          <div className="flex items-center gap-1 text-sm text-[#0d0d0d]">
-            <span>指标设置</span>
-            <Select
-              value={metricForTrend}
-              onChange={(v) => setMetricForTrend(v as string)}
-              options={metricOptions}
-              className="w-[120px]"
-            />
-          </div>
+          <Select
+            prefix="指标设置"
+            value={metricForTrend}
+            onChange={(v) => setMetricForTrend(v as string)}
+            options={metricOptions}
+          />
         </div>
         <div
           className="pt-5 px-6 border border-[#e2e5ea] rounded-lg m-4"
@@ -1015,14 +1013,11 @@ export default function ContentAssetPage() {
             品牌关键词
           </span>
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1 text-sm text-[#0d0d0d]">
-              <span>关键词类型:</span>
-              <Select
-                value="all"
-                options={[{ label: '不限', value: 'all' }]}
-                className="w-[100px]"
-              />
-            </div>
+            <Select
+              prefix="关键词类型"
+              value="all"
+              options={[{ label: '不限', value: 'all' }]}
+            />
           </div>
         </div>
         <div className="px-6 py-5">

@@ -2,7 +2,6 @@
 
 import {
   Button,
-  DateRangePicker,
   Popover,
   RuyiLayout,
   Select,
@@ -16,6 +15,7 @@ import {
   GROWTH_QUADRANTS,
   MatrixScatterChart,
 } from '../blocks/quadrant-scatter';
+import { RyDateRangePicker } from '../blocks/ry-date-range-picker';
 import { MindTreemapD3 } from '../blocks/treemap-panel';
 import brandMindDashboardFixture from './data/brand-mind-dashboard.json';
 
@@ -436,6 +436,10 @@ export default function BrandMindDashboardPage() {
   const cdnData = brandMindDashboardCdnData;
   const [activeNav, setActiveNav] = useState('洞察诊断');
   const [activeMenu, setActiveMenu] = useState('brand-mind-dashboard');
+  const [dashboardDateRange, setDashboardDateRange] = useState<[Date, Date]>([
+    new Date('2026-03-22'),
+    new Date('2026-04-21'),
+  ]);
 
   const overview = cdnData?.overview;
   const trend = cdnData?.trend;
@@ -484,10 +488,10 @@ export default function BrandMindDashboardPage() {
           </div>
         </div>
         <div className="flex items-center gap-4 px-6 h-[68px]">
-          <DateRangePicker
-            className="w-[280px]"
-            value={[new Date('2026-03-22'), new Date('2026-04-21')]}
-            allowClear={false}
+          <RyDateRangePicker
+            value={dashboardDateRange}
+            onChange={setDashboardDateRange}
+            triggerWidth="280px"
           />
           <Select
             value="2"

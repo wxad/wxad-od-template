@@ -996,7 +996,7 @@ function TrendAnalysisSection({
         >
           <div className="my-4">
             <Select
-              light
+              prefix="趋势"
               value={r5Select}
               onChange={(v) => setR5Select(v as number)}
               options={data5RSelectOptions}
@@ -1016,7 +1016,7 @@ function TrendAnalysisSection({
         >
           <div className="my-4">
             <Select
-              light
+              prefix="趋势"
               value={r0Select}
               onChange={(v) => setR0Select(v as string)}
               options={r0Options}
