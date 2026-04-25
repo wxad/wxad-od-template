@@ -227,7 +227,9 @@ function AssetTrendChart() {
           资产人数趋势
         </span>
         <Select
-          prefix="时间范围"
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">时间范围</span>
+          }
           value={timeRange}
           onChange={(v) => setTimeRange(v as string)}
           options={TIME_RANGE_OPTIONS}
@@ -282,7 +284,7 @@ function StoreFilterSection() {
       </div>
 
       <Select
-        prefix="店铺"
+        prefix={<span className="text-[var(--odn-color-black-9)]">店铺</span>}
         value={store}
         onChange={(v) => setStore(v as string)}
         options={STORE_OPTIONS}
@@ -291,13 +293,13 @@ function StoreFilterSection() {
       />
 
       <DatePicker
-        prefix="日期"
+        prefix={<span className="text-[var(--odn-color-black-9)]">日期</span>}
         value={new Date('2026-04-20')}
         className="w-[200px]"
       />
 
       <Cascader
-        prefix="对比模式"
+        prefix={<span className="text-[var(--odn-color-black-9)]">对比模式</span>}
         options={COMPARE_OPTIONS}
         value={comparePath}
         onChange={(val) => setComparePath(val as string[])}

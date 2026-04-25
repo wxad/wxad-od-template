@@ -778,7 +778,9 @@ export default function OutsidePage() {
               趋势相关性分析
             </span>
             <Select
-              prefix="指标设置"
+              prefix={
+                <span className="text-[var(--odn-color-black-9)]">指标设置</span>
+              }
               value={metricForTrend}
               onChange={(v) => setMetricForTrend(v as string)}
               options={metricOptions}
@@ -843,7 +845,11 @@ export default function OutsidePage() {
                       />
                     </Tooltip>
                     <Select
-                      prefix="词云设置"
+                      prefix={
+                        <span className="text-[var(--odn-color-black-9)]">
+                          词云设置
+                        </span>
+                      }
                       value={wordCloudMetric}
                       onChange={(v) => setWordCloudMetric(v as string)}
                       options={wordCloudOptions}

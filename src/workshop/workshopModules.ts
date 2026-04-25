@@ -39,6 +39,8 @@ export const WORKSHOP_SLUG_TO_IMPORT: Record<
   "table-empty-state": () => import("./table-empty-state"),
   "multi-step-config": () => import("./multi-step-config"),
   "store-asset-distribution": () => import("./store-asset-distribution"),
+  "store-asset-conversion": () => import("./store-asset-conversion"),
+  "store-asset-profile": () => import("./store-asset-profile"),
 }
 
 export const WORKSHOP_INDEX: { slug: string; title: string }[] = [
@@ -73,4 +75,6 @@ export const WORKSHOP_INDEX: { slug: string; title: string }[] = [
   { slug: "color-token-drift", title: "色值 Token 漂移（回归）" },
   { slug: "table-empty-state", title: "表格空状态（回归）" },
   { slug: "store-asset-distribution", title: "微信小店 · 资产分布" },
+  { slug: "store-asset-conversion", title: "微信小店 · 资产流转" },
+  { slug: "store-asset-profile", title: "微信小店 · 资产画像" },
 ]

@@ -997,7 +997,7 @@ function TrendAnalysisSection({
         >
           <div className="my-4">
             <Select
-              prefix="趋势"
+              prefix={<span className="text-[var(--odn-color-black-9)]">趋势</span>}
               value={r5Select}
               onChange={(v) => setR5Select(v as number)}
               options={data5RSelectOptions}
@@ -1017,7 +1017,7 @@ function TrendAnalysisSection({
         >
           <div className="my-4">
             <Select
-              prefix="趋势"
+              prefix={<span className="text-[var(--odn-color-black-9)]">趋势</span>}
               value={r0Select}
               onChange={(v) => setR0Select(v as string)}
               options={r0Options}
@@ -1089,7 +1089,9 @@ const BrandCrowdAsset = () => {
         </div>
         <div className="flex items-center gap-3 border-t border-black-4 px-6 py-3">
           <Select
-            prefix={<span className="text-black-9">对比模式</span>}
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">对比模式</span>
+            }
             value="competitor"
             options={[
               { label: '行业均值', value: 'industry' },

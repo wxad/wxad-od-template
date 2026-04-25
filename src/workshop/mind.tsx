@@ -1021,7 +1021,7 @@ export default function SearchInsight() {
         <div className="flex flex-col gap-3 pb-4">
           <div className="flex items-center justify-between">
             <Select
-              prefix="报告"
+              prefix={<span className="text-[var(--odn-color-black-9)]">报告</span>}
               value={reportDetail.mind_insight_id}
               options={[
                 {
@@ -1158,7 +1158,11 @@ export default function SearchInsight() {
                 排除标签包含词
               </Checkbox>
               <Select
-                prefix="关键词类型"
+                prefix={
+                  <span className="text-[var(--odn-color-black-9)]">
+                    关键词类型
+                  </span>
+                }
                 value={keywordType}
                 onChange={(v) => setKeywordType(v as string)}
                 options={keywordTypeOptions}

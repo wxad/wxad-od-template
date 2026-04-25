@@ -475,7 +475,9 @@ const CustomAudienceListPage = () => {
               <Select
                 value={statusFilter}
                 options={STATUS_OPTIONS}
-                prefix={<span className="text-black-9">状态：</span>}
+                prefix={
+                  <span className="text-[var(--odn-color-black-9)]">状态：</span>
+                }
                 className="min-w-[160px]"
                 onChange={(v) => {
                   setStatusFilter(String(v ?? 'ALL'));
@@ -485,7 +487,9 @@ const CustomAudienceListPage = () => {
               <Select
                 value={typeFilter}
                 options={TYPE_OPTIONS}
-                prefix={<span className="text-black-9">类型：</span>}
+                prefix={
+                  <span className="text-[var(--odn-color-black-9)]">类型：</span>
+                }
                 className="min-w-[180px]"
                 onChange={(v) => {
                   setTypeFilter(String(v ?? 'ALL'));
@@ -495,7 +499,11 @@ const CustomAudienceListPage = () => {
               <Select
                 value={ownerFilter}
                 options={OWNER_OPTIONS}
-                prefix={<span className="text-black-9">人群创建方式：</span>}
+                prefix={
+                  <span className="text-[var(--odn-color-black-9)]">
+                    人群创建方式：
+                  </span>
+                }
                 className="min-w-[200px]"
                 onChange={(v) => {
                   setOwnerFilter(String(v ?? 'ALL'));

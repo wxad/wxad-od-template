@@ -318,7 +318,7 @@ function RankingMindshareSelect() {
   const [value, setValue] = useState('all');
   return (
     <Select
-      prefix="范围"
+      prefix={<span className="text-[var(--odn-color-black-9)]">范围</span>}
       value={value}
       options={MINDSHARE_SCOPE_OPTIONS}
       onChange={(v) => setValue(String(v ?? 'all'))}

@@ -726,7 +726,9 @@ const MindshareDetail = () => {
             onChange={setMindDateRange}
           />
           <Select
-            prefix={<span className="text-black-9">参考系</span>}
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">参考系</span>
+            }
             value="product"
             options={[{ label: '竞品均值', value: 'product' }]}
             className="w-[160px]"

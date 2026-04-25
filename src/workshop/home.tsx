@@ -751,7 +751,7 @@ function RadarBox({
       <div className="w-full">
         <div className="px-5 py-3">
           <Select
-            prefix="排名"
+            prefix={<span className="text-[var(--odn-color-black-9)]">排名</span>}
             value={rankKey}
             onChange={(val) => setRankKey(val as string)}
             options={selectData.map((opt: any) => ({

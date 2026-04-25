@@ -452,7 +452,9 @@ const AISmartCrowdPage = () => {
               value={statusFilter}
               options={STATUS_OPTIONS}
               className="w-[200px]"
-              prefix={<span className="text-black-9">计算状态</span>}
+              prefix={
+                <span className="text-[var(--odn-color-black-9)]">计算状态</span>
+              }
               onChange={(v) => {
                 setStatusFilter(String(v ?? ''));
                 setPage(1);

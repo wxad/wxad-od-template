@@ -645,7 +645,7 @@ const SpuAudienceAssetPage = () => {
         </div>
         <div className="flex flex-wrap items-center gap-3 px-6 py-4">
           <Select
-            prefix={<span className="text-black-9">SPU</span>}
+            prefix={<span className="text-[var(--odn-color-black-9)]">SPU</span>}
             className="w-[360px]"
             value="spu-1"
             options={[
@@ -681,7 +681,9 @@ const SpuAudienceAssetPage = () => {
             />
           </div>
           <Select
-            prefix={<span className="text-black-9">参考系</span>}
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">参考系</span>
+            }
             value="top5"
             options={[
               { value: 'same-brand', label: '同品牌-商品均值' },

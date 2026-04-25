@@ -54,7 +54,9 @@ function BrandMindsetHeader() {
       />
       <div className="flex items-center gap-3 border-t border-black-4 px-6 py-3">
         <Select
-          prefix={<span className="text-black-9">品牌/系列</span>}
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">品牌/系列</span>
+          }
           value="xiaomi"
           options={[
             { label: '小米汽车', value: 'xiaomi' },
@@ -71,7 +73,9 @@ function BrandMindsetHeader() {
           className="w-[280px]"
         />
         <Select
-          prefix={<span className="text-black-9">参考系</span>}
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">参考系</span>
+          }
           value="product"
           options={[{ label: '竞品均值', value: 'product' }]}
           className="w-[200px]"
@@ -107,7 +111,9 @@ function IndustryMindsetHeader() {
           className="w-[280px]"
         />
         <Select
-          prefix={<span className="text-black-9">参考系</span>}
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">参考系</span>
+          }
           value="product"
           options={[{ label: '竞品均值', value: 'product' }]}
           className="w-[200px]"
@@ -315,7 +321,9 @@ function MindsetDetailHeader() {
         </div>
         {scope === 'brand' ? (
           <Select
-            prefix={<span className="text-black-9">品牌/系列</span>}
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">品牌/系列</span>
+            }
             value="xiaomi"
             options={[
               { label: '小米汽车', value: 'xiaomi' },
@@ -333,7 +341,9 @@ function MindsetDetailHeader() {
           className="w-[280px]"
         />
         <Select
-          prefix={<span className="text-black-9">参考系</span>}
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">参考系</span>
+          }
           value="product"
           options={[{ label: '竞品均值', value: 'product' }]}
           className="w-[200px]"
@@ -492,7 +502,9 @@ function SpuFilterBar() {
           ]}
           value={ref}
           onChange={setRef}
-          prefix={<span className="text-black-9">参考系</span>}
+          prefix={
+            <span className="text-[var(--odn-color-black-9)]">参考系</span>
+          }
         />
       </div>
     </Card>
@@ -1007,7 +1019,9 @@ function StoreAnalysisHeader() {
 
           {/* 推荐模式 */}
           <Select
-            prefix={<span className="text-black-9">推荐模式</span>}
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">推荐模式</span>
+            }
             value="normal"
             options={[
               { label: '常规推荐', value: 'normal' },

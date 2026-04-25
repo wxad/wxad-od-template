@@ -237,7 +237,9 @@ function CrowdSourcePicker({
                   className="w-[100px]"
                   size="small"
                   allowClear={false}
-                  prefix={<span className="text-black-9">状态</span>}
+                  prefix={
+                    <span className="text-[var(--odn-color-black-9)]">状态</span>
+                  }
                   value={customFilter}
                   options={[
                     { label: '全部', value: 'all' },
@@ -736,7 +738,9 @@ function RippleChart() {
       <div className="flex items-center justify-between px-3 py-3">
         <div className="flex items-center gap-1">
           <Select
-            prefix="人群类目"
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">人群类目</span>
+            }
             allowClear={false}
             value={category}
             onChange={setCategory}

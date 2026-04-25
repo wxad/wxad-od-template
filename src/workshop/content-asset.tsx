@@ -910,7 +910,9 @@ export default function ContentAssetPage() {
           </div>
           <div className="flex items-center gap-2">
             <Select
-              prefix="指标设置"
+              prefix={
+                <span className="text-[var(--odn-color-black-9)]">指标设置</span>
+              }
               value={metricForRank}
               onChange={(v) => setMetricForRank(v as string)}
               options={metricOptions}
@@ -969,7 +971,9 @@ export default function ContentAssetPage() {
             趋势分析
           </span>
           <Select
-            prefix="指标设置"
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">指标设置</span>
+            }
             value={metricForTrend}
             onChange={(v) => setMetricForTrend(v as string)}
             options={metricOptions}
@@ -1015,7 +1019,9 @@ export default function ContentAssetPage() {
           </span>
           <div className="flex items-center gap-2">
             <Select
-              prefix="关键词类型"
+              prefix={
+                <span className="text-[var(--odn-color-black-9)]">关键词类型</span>
+              }
               value="all"
               options={[{ label: '不限', value: 'all' }]}
             />

@@ -479,7 +479,9 @@ function StoreAnalysis({
       >
         <div className="flex mr-3 w-[426px]">
           <Select
-            prefix="门店类型"
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">门店类型</span>
+            }
             value={storeMode}
             onChange={(v) => setStoreMode(v as string)}
             options={[
@@ -517,7 +519,9 @@ function StoreAnalysis({
               value={recmMode}
               onChange={(v) => setRecmMode(v as number)}
               options={RecommendedMode}
-              prefix="推荐模式"
+              prefix={
+                <span className="text-[var(--odn-color-black-9)]">推荐模式</span>
+              }
               className="w-[200px]"
             />
           </div>
@@ -547,7 +551,11 @@ function StoreAnalysis({
                   value={domain}
                   onChange={(v) => setDomain(v as string)}
                   options={WorkResidenceModel}
-                  prefix="职住模式"
+                  prefix={
+                    <span className="text-[var(--odn-color-black-9)]">
+                      职住模式
+                    </span>
+                  }
                   className="w-[200px]"
                 />
               </div>
@@ -558,7 +566,11 @@ function StoreAnalysis({
                   value={distance}
                   onChange={(v) => setDistance(v as number)}
                   options={DistanceLimitOptions}
-                  prefix="距离限制"
+                  prefix={
+                    <span className="text-[var(--odn-color-black-9)]">
+                      距离限制
+                    </span>
+                  }
                   className="w-[200px]"
                 />
               </div>
@@ -648,7 +660,9 @@ function OnePartyAnalysis({
             options={cdnData?.audienceOptions || []}
             placeholder="请选择计算成功人群"
             showSearch
-            prefix="一方人群包"
+            prefix={
+              <span className="text-[var(--odn-color-black-9)]">一方人群包</span>
+            }
           />
         </div>
 
@@ -686,7 +700,11 @@ function OnePartyAnalysis({
                   value={domain}
                   onChange={(v) => setDomain(v as string)}
                   options={WorkResidenceModel}
-                  prefix="职住模式"
+                  prefix={
+                    <span className="text-[var(--odn-color-black-9)]">
+                      职住模式
+                    </span>
+                  }
                 />
               </div>
             </Tooltip>
