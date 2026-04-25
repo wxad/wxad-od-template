@@ -76,7 +76,7 @@ const benchmarkTypeMap: Record<number, string> = {
 };
 
 // ─── 导航配置 ──────────────────────────────────────────────
-const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量'];
+const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量', '生意'];
 const MENU_ITEMS: RuyiMenuItem[] = [
   {
     key: 'market',
@@ -143,6 +143,7 @@ const NAV_ROUTES: Record<string, string> = {
   人群策略: 'r-zero-crowd',
   策略应用: 'insight-ip',
   全域度量: 'review',
+  生意: 'store-asset-distribution',
 };
 
 function navigateNav(label: string) {

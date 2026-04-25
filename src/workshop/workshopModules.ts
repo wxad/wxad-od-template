@@ -38,6 +38,7 @@ export const WORKSHOP_SLUG_TO_IMPORT: Record<
   "color-token-drift": () => import("./color-token-drift"),
   "table-empty-state": () => import("./table-empty-state"),
   "multi-step-config": () => import("./multi-step-config"),
+  "store-asset-distribution": () => import("./store-asset-distribution"),
 }
 
 export const WORKSHOP_INDEX: { slug: string; title: string }[] = [
@@ -71,4 +72,5 @@ export const WORKSHOP_INDEX: { slug: string; title: string }[] = [
   { slug: "icon-source-violation", title: "图标来源违规（回归）" },
   { slug: "color-token-drift", title: "色值 Token 漂移（回归）" },
   { slug: "table-empty-state", title: "表格空状态（回归）" },
+  { slug: "store-asset-distribution", title: "微信小店 · 资产分布" },
 ]

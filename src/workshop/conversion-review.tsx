@@ -47,6 +47,7 @@ const NAV_ROUTES: Record<string, string> = {
   '人群策略': 'r-zero-crowd',
   '策略应用': 'insight-ip',
   '全域度量': 'review',
+  生意: 'store-asset-distribution',
 };
 
 function navigateNav(label: string) {
@@ -370,7 +371,8 @@ export default function ConversionReviewPage() {
   const setting = data?.setting || {};
 
   return (
-    <RuyiLayout navItems={['首页', '洞察诊断', '人群策略', '策略应用', '全域度量']} activeNav="全域度量" onNavChange={navigateNav} menuItems={MENU_ITEMS} activeMenu="conversion-review" onMenuChange={navigateMenu}>
+    <RuyiLayout navItems={['首页', '洞察诊断', '人群策略', '策略应用', '全域度量', '生意']} activeNav="全域度量" onNavChange={navigateNav} menuItems={MENU_ITEMS} activeMenu="conversion-review" onMenuChange={navigateMenu}>
+  生意: 'store-asset-distribution',
       <ReviewMasterDetailLayout
         left={
           <ReportList

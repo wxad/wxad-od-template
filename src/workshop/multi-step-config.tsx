@@ -3,7 +3,7 @@
 import { Button, Card, RuyiLayout, Select, type RuyiMenuItem } from 'one-design-next';
 import React, { useState } from 'react';
 
-const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量'];
+const NAV_ITEMS = ['首页', '洞察诊断', '人群策略', '策略应用', '全域度量', '生意'];
 
 // 顶栏 label → workshop 页面 slug（本文件独立维护，不与其他 workshop 页面共享）
 const NAV_ROUTES: Record<string, string> = {
@@ -12,6 +12,7 @@ const NAV_ROUTES: Record<string, string> = {
   '人群策略': 'r-zero-crowd',
   '策略应用': 'insight-ip',
   '全域度量': 'review',
+  生意: 'store-asset-distribution',
 };
 
 function navigateNav(label: string) {
